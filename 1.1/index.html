@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+
+<html lang="sv">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grundläggande HTML</title>
+    <meta name="description" content="">
+</head>
+
+<body>
+    <h1 id="#top">Grundläggande HTML5</h1>
+    <hr>
+
+    <article>
+        <h3>Doctype</h3>
+        <p>Doctype deklareras för att instruera webläsaren vilken version av html som sidan är skriven i.</p>
+        <p>För HTML5 används deklarationen <strong>&lt;!DOCTYPE html&gt;</strong></p>
+
+        <h3>Teckenkod</h3>
+        <p>För att webläsaren ska veta vilken typ av teckenkodning som sidan använder måste detta deklareras. UTF-8
+            innehåller de flesta tecken som finns.</p>
+        <p>För HTML5 används deklarationen <strong>&lt;meta charset="utf-8"&gt;</strong></p>
+
+        <h3>Språk</h3>
+        <p>Man deklarerar vilket språk som är det huvudsakliga språket för sidan för att t.ex sökmotorer ska få en
+            bättre filtrering.</p>
+        <p>Deklarationen görs i html-taggen på följande sätt <strong>&lt;html lang="sv"&gt;</strong> </p>
+
+        <h3>Validering</h3>
+        <p>Validering gör man för att hitta fel i koden som inte följer den rekommenderade standarden för HTML5. Det
+            finns olika valideringsverktyg som till exempel <strong>https://validator.w3.org/</strong> som vi använder
+            oss av i kursen.</p>
+
+        <h3>Hur är ett HTML-dokument uppbyggt</h3>
+        <p>Ett HTML-dokument har en struktur som bygger på element som öppnar och stänger sektioner av koden vilket
+            resulterar i vart information ska visas. Nedan är ett exempel på hur grundstrukturen ser ut.</p>
+
+    </article>
+    <hr>
+    <article>
+        <h2>Struktur</h2>
+        <h3>body</h3>
+        <p>I body-elementet finns allt innehåll för sidan såsom text, bilder etc.</p>
+        <h3>head</h3>
+        <p>head-elementet innehåller metadata om html-dokumentet såsom <strong>charset, styles etc.</strong></p>
+        <h3>html</h3>
+        <p>html-elementet är det som definerar hela dokumentet och innehåller hela koden.</p>
+        <h3>title</h3>
+        <p>Definerar titeln för dokumentet vilket sedan visas i broserns toolbar och i sökmotorer.</p>
+        <h3>Exempel</h3>
+        <p>
+            &lt;!DOCTYPE html&gt;<br>
+            &lt;html&gt;<br>
+            <br>
+            &nbsp;&nbsp;&lt;head&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Title&lt;/title&gt;<br>
+            &nbsp;&nbsp;&lt;/head&gt;<br>
+            <br>
+            &nbsp;&nbsp;&lt;body&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Hello World&lt;/p&gt;<br>
+            &nbsp;&nbsp;&lt;/body&gt;<br>
+            <br>
+            &lt;/html&gt;<br>
+        </p>
+    </article>
+    <hr>
+    <article>
+        <h2>Metainformation</h2>
+        <h3>author</h3>
+        <p>Definerar författaren av en fil/sida.</p>
+        <p>Exempel: &lt;meta name="author" content="Niclas Lövdahl"></p>
+        <h3>description</h3>
+        <p>Beskrivning av fil/sida.</p>
+        <p>Exempel: &lt;meta name="description" content="Detta är en kurs i html."></p>
+        <h3>generator</h3>
+        <p>Specifierar vilken mjukvara som använts för att skapa dokumentet.</p>
+        <p>Exempel: &lt;meta name="generator" content="WordPress"></p>
+        <h3>keywords</h3>
+        <p>Specifierar en lista av nyckelord relevanta till sidan som sedan används av sökmotorer.</p>
+        <p>Exempel: &lt;meta name="keywords" content="HTML, Tutorial"> </p>
+        <h3>robots</h3>
+        <p>Meta robotstaggen används för att säga åt sökmotorer vilka sidor som ska visas eller döljas av sökmotorer.
+            Det finns 4 huvudfunktioner FOLLOW, INDEX, NOFOLLOW och NOINDEX.</p>
+        <ul>
+            <li>FOLLOW - Sökmotorn forsätter crawla länkarna på denna sida.</li>
+            <li>INDEX - Sökmoton indexerar sidan i fråga.</li>
+            <li>NOFOLLOW - Sökmotorn crawlar inte länkarna för sidan.</li>
+            <li>NOINDEX - Sökmotorn indexerar inte sidan i fråga.</li>
+        </ul>
+        <p>Exempel: &lt;meta name =”robots” content=”index”></p>
+        <h3>http-equiv</h3>
+        <p>http-equiv används för att simulera en HTTP response header och kan användas om man till exempel inte har
+            tillgång till server config filer.</p>
+        <p>Exempel: &lt;meta http-equiv="refresh" content="60"> (Uppdaterar dokumentet varje minut)</p>
+    </article>
+    <hr>
+    <article>
+        <h2>Text</h2>
+        <h3>abbr</h3>
+        <p>Taggen avnvänds för att beskriva eller skriva ut en förklaring av ett visst ord eller viss text. Man kan se
+            denna beskrivning genom att hålla pekaren över ordet.</p>
+        <p>Exempel: &lt;abbr title="HyperText Markup Language">HTML</abbr> är kul &lt;abbr title="Laughing Out
+            Loud">LOL</abbr>.</p>
+        <p>Resultat: <abbr title="HyperText Markup Language">HTML</abbr> är kul <abbr title="Laughing Out Loud">LOL</abbr>.</p>
+        <h3>blockquote</h3>
+        <p>Taggen används när innehållet har citerats från en annan källa.</p>
+        <p>Exempel:
+            &lt;blockquote cite="https://sv.wikipedia.org/wiki/Astral_projektion">
+            Astral projektion eller astralprojektion (även bland annat ut-ur-kroppenupplevelse eller, företrädesvis i
+            troende kretsar, astral resa) är en kontroversiell tolkning av en upplevelse som går ut på att en så kallad
+            astralkropp (eller en persons själ eller medvetande) skiljs från den fysiska kroppen. Detta sägs kunna
+            inträffa eller uppnås i ett hypnagogt tillstånd eller genom drömmar, djup meditation eller droger.
+            &lt;/blockquote></p>
+        <p>Resultat:
+            <blockquote cite="https://sv.wikipedia.org/wiki/Astral_projektion">
+                Astral projektion eller astralprojektion (även bland annat ut-ur-kroppenupplevelse eller, företrädesvis
+                i
+                troende kretsar, astral resa) är en kontroversiell tolkning av en upplevelse som går ut på att en så
+                kallad
+                astralkropp (eller en persons själ eller medvetande) skiljs från den fysiska kroppen. Detta sägs kunna
+                inträffa eller uppnås i ett hypnagogt tillstånd eller genom drömmar, djup meditation eller droger.
+            </blockquote>
+        </p>
+        <h3>HTML &lt;h1> till &lt;h6> taggar</h3>
+        <p>h taggarna används för att göra rubriker i ordning från viktiagst till minst viktig rubrik.</p>
+        <p>Exempel:</p>
+        <p>&lt;h1>Titel&lt/h1></p>
+        <p>&lt;h2>Titel&lt/h2></p>
+        <p>&lt;h3>Titel&lt/h3></p>
+        <p>&lt;h4>Titel&lt/h4></p>
+        <p>&lt;h5>Titel&lt/h5></p>
+        <p>&lt;h6>Titel&lt/h6></p>
+        <p>Resultat:</p>
+        <h1>Titel</h1>
+        <h2>Titel</h2>
+        <h3>Titel</h3>
+        <h4>Titel</h4>
+        <h5>Titel</h5>
+        <h3>p</h3>
+        <p>Taggen definerar en paragraf och det läggs automatiskt till mellanrum efter varje paragraf.</p>
+        <p>Exempel:</p>
+        &lt;p>Lorem ipsum dolor sit amet, sit enim dicam admodum ei, vis ex probo lobortis. Nec et eruditi conceptam,
+        et nam nostrum officiis, ad minimum partiendo persequeris usu. Mea eius mutat no, an ius accusata consulatu. Ex
+        tota dicat insolens nec, illum epicuri periculis ea quo. Ut dicam disputationi ius.&lt;/p><br>
+        &lt;p>Diceret voluptua vel ad, ad meis percipit nec. Sed debet comprehensam te, nemore impetus noluisse sit ea.
+        Et nec mandamus molestiae maiestatis, te quo odio aliquid reprimique. Aliquip atomorum id sit, eum et modo
+        viderer. Primis vivendum maiestatis quo an, sit tacimates forensibus in.&lt;/p>
+        </p>
+        <p>Resultat:</p>
+        <p>Lorem ipsum dolor sit amet, sit enim dicam admodum ei, vis ex probo lobortis. Nec et eruditi conceptam, et
+            nam nostrum officiis, ad minimum partiendo persequeris usu. Mea eius mutat no, an ius accusata consulatu.
+            Ex tota dicat insolens nec, illum epicuri periculis ea quo. Ut dicam disputationi ius.</p>
+        <p>Diceret voluptua vel ad, ad meis percipit nec. Sed debet comprehensam te, nemore impetus noluisse sit ea. Et
+            nec mandamus molestiae maiestatis, te quo odio aliquid reprimique. Aliquip atomorum id sit, eum et modo
+            viderer. Primis vivendum maiestatis quo an, sit tacimates forensibus in.</p>
+        <h3>pre</h3>
+        <p>Text som innanför pre taggen visar texten precis som den är med mellanrum och radbrytningar med en font som
+            har fixerad teckenbredd.</p>
+        <p>Exempel:</p>
+        <p>&lt;pre>Här&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;är&nbsp;&nbsp;konstigt olika&nbsp;&nbsp;&nbsp;många
+            mellanrum&lt;pre>
+            <p>Resultat:</p>
+            <pre>Här     är  konstigt olika  många mellanrum</pre>
+            <h3>span</h3>
+            <p>Span är en generisk container likt div men används istället i text. Det kan användas för att tex
+                gruppera och/eller styla delar av text.</p>
+            <p>Exempel:</p>
+            <p>Delar av denna &lt;span>mening är&lt;/span> grupperad.</p>
+            <p>Resultat:</p>
+            <p>Delar av denna <span>mening är</span> grupperad.</p> (Ger inget resultat såklart då jag inte har delgett
+            någon class eller syles vilket inte var tillåtet i denna uppgift)
+    </article>
+    <hr>
+    <article>
+        <h2>Hyptertext</h2>
+        <h3>Relativ och absolut länk</h3>
+        <p>En relativ länk är en länk till ett dokument/fil som har en sökväg relativt till det dokumment som visas.
+        </p>
+        <p>Exempel: &lt;a href="/images/bild.png">Bildlänk&lt;/a></p>
+        <p>En absolut länk specifierar hela sökvägen till länken, inklusive domän.</p>
+        <p>Exempel: &lt;a href="https://www.google.se">Länk till Google&lt;/a></p>
+        <h3>Länk till ankare</h3>
+        <p>En länk till en ankare är en länk som leder till en annan del i samma dokument. Man kan genom att referera
+            till en annan tags id specifiera var i dokumentet man vill hamna.</p>
+        <p>Exempel: &lt;a href="#top">Ta mig till toppen av dokumentet&lt;/a></p>
+        <p>Resultat: <a href="#top">Ta mig till toppen av dokumentet</a></p>
+        <h3>Bild-länk</h3>
+        <p>En bild-länk är en klickbar bild som fungerar som en länk.</p>
+        <p>Exempel: &lt;a href="https://sv.wikipedia.org/wiki/Golden_retriever"> &lt;img
+            src="https://s-media-cache-ak0.pinimg.com/originals/91/d4/f0/91d4f0461db7abe765b90c7650d6e911.jpg"
+            width="50%" height="50%"> &lt;/a></p>
+        <p>Resultat:</p>
+        <a href="https://sv.wikipedia.org/wiki/Golden_retriever"> <img src="https://s-media-cache-ak0.pinimg.com/originals/91/d4/f0/91d4f0461db7abe765b90c7650d6e911.jpg"
+                width="50%" height="50%"></a></p>
+        <h3>Länk till olika protokoll</h3>
+        <p>Man kan även skapa länkar som hänvisar till andra protokoll så som ftp (file transfer protocol).</p>
+        <p>Exempel: &lt;a href="ftp://ftp.funet.fi/pub/standards/RFC/rfc959.txt">FTP Standard&lt;/a></p>
+        <p>Resultat:</p>
+        <a href="ftp://ftp.funet.fi/pub/standards/RFC/rfc959.txt">FTP Standard</a>
+        <h3>Mailto-länk</h3>
+        <p>Länk som tar en direkt till emailprogram på datorn med förbestämd mottagare.</p>
+        <p>Exempel: &lt;a href="mailto:for.efternamn@example.com">Email me!&lt;/a></p>
+        <p>Resultat:</p>
+        <a href="mailto:for.efternamn@example.com">Email me!</a>
+    </article>
+    <hr>
+</body>
+
+</html>
