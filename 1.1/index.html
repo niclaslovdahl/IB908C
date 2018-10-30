@@ -101,8 +101,8 @@
         <h3>abbr</h3>
         <p>Taggen avnvänds för att beskriva eller skriva ut en förklaring av ett visst ord eller viss text. Man kan se
             denna beskrivning genom att hålla pekaren över ordet.</p>
-        <p>Exempel: &lt;abbr title="HyperText Markup Language">HTML</abbr> är kul &lt;abbr title="Laughing Out
-            Loud">LOL</abbr>.</p>
+        <p>Exempel: &lt;abbr title="HyperText Markup Language">HTML&lt;/abbr> är kul &lt;abbr title="Laughing Out
+            Loud">LOL&lt;/abbr>.</p>
         <p>Resultat: <abbr title="HyperText Markup Language">HTML</abbr> är kul <abbr title="Laughing Out Loud">LOL</abbr>.</p>
         <h3>blockquote</h3>
         <p>Taggen används när innehållet har citerats från en annan källa.</p>
@@ -113,25 +113,24 @@
             astralkropp (eller en persons själ eller medvetande) skiljs från den fysiska kroppen. Detta sägs kunna
             inträffa eller uppnås i ett hypnagogt tillstånd eller genom drömmar, djup meditation eller droger.
             &lt;/blockquote></p>
-        <p>Resultat:
-            <blockquote cite="https://sv.wikipedia.org/wiki/Astral_projektion">
-                Astral projektion eller astralprojektion (även bland annat ut-ur-kroppenupplevelse eller, företrädesvis
-                i
-                troende kretsar, astral resa) är en kontroversiell tolkning av en upplevelse som går ut på att en så
-                kallad
-                astralkropp (eller en persons själ eller medvetande) skiljs från den fysiska kroppen. Detta sägs kunna
-                inträffa eller uppnås i ett hypnagogt tillstånd eller genom drömmar, djup meditation eller droger.
-            </blockquote>
-        </p>
+        <p>Resultat:</p>
+        <blockquote cite="https://sv.wikipedia.org/wiki/Astral_projektion">
+            Astral projektion eller astralprojektion (även bland annat ut-ur-kroppenupplevelse eller, företrädesvis
+            i
+            troende kretsar, astral resa) är en kontroversiell tolkning av en upplevelse som går ut på att en så
+            kallad
+            astralkropp (eller en persons själ eller medvetande) skiljs från den fysiska kroppen. Detta sägs kunna
+            inträffa eller uppnås i ett hypnagogt tillstånd eller genom drömmar, djup meditation eller droger.
+        </blockquote>
         <h3>HTML &lt;h1> till &lt;h6> taggar</h3>
         <p>h taggarna används för att göra rubriker i ordning från viktiagst till minst viktig rubrik.</p>
         <p>Exempel:</p>
-        <p>&lt;h1>Titel&lt/h1></p>
-        <p>&lt;h2>Titel&lt/h2></p>
-        <p>&lt;h3>Titel&lt/h3></p>
-        <p>&lt;h4>Titel&lt/h4></p>
-        <p>&lt;h5>Titel&lt/h5></p>
-        <p>&lt;h6>Titel&lt/h6></p>
+        <p>&lt;h1>Titel&lt;/h1></p>
+        <p>&lt;h2>Titel&lt;/h2></p>
+        <p>&lt;h3>Titel&lt;/h3></p>
+        <p>&lt;h4>Titel&lt;/h4></p>
+        <p>&lt;h5>Titel&lt;/h5></p>
+        <p>&lt;h6>Titel&lt;/h6></p>
         <p>Resultat:</p>
         <h1>Titel</h1>
         <h2>Titel</h2>
@@ -147,7 +146,6 @@
         &lt;p>Diceret voluptua vel ad, ad meis percipit nec. Sed debet comprehensam te, nemore impetus noluisse sit ea.
         Et nec mandamus molestiae maiestatis, te quo odio aliquid reprimique. Aliquip atomorum id sit, eum et modo
         viderer. Primis vivendum maiestatis quo an, sit tacimates forensibus in.&lt;/p>
-        </p>
         <p>Resultat:</p>
         <p>Lorem ipsum dolor sit amet, sit enim dicam admodum ei, vis ex probo lobortis. Nec et eruditi conceptam, et
             nam nostrum officiis, ad minimum partiendo persequeris usu. Mea eius mutat no, an ius accusata consulatu.
@@ -190,10 +188,10 @@
         <p>En bild-länk är en klickbar bild som fungerar som en länk.</p>
         <p>Exempel: &lt;a href="https://sv.wikipedia.org/wiki/Golden_retriever"> &lt;img
             src="https://s-media-cache-ak0.pinimg.com/originals/91/d4/f0/91d4f0461db7abe765b90c7650d6e911.jpg"
-            width="50%" height="50%"> &lt;/a></p>
+            width="300" height="150"> &lt;/a></p>
         <p>Resultat:</p>
         <a href="https://sv.wikipedia.org/wiki/Golden_retriever"> <img src="https://s-media-cache-ak0.pinimg.com/originals/91/d4/f0/91d4f0461db7abe765b90c7650d6e911.jpg"
-                width="50%" height="50%"></a></p>
+                width="300" height="150" alt="Image not found"></a>
         <h3>Länk till olika protokoll</h3>
         <p>Man kan även skapa länkar som hänvisar till andra protokoll så som ftp (file transfer protocol).</p>
         <p>Exempel: &lt;a href="ftp://ftp.funet.fi/pub/standards/RFC/rfc959.txt">FTP Standard&lt;/a></p>
@@ -206,6 +204,162 @@
         <a href="mailto:for.efternamn@example.com">Email me!</a>
     </article>
     <hr>
+    <article>
+        <h2>Oordnad, ordnad och beskriven lista</h2>
+        <p>I HTML5 finns det olika typer av taggar för att skapa listor beskrivna nedan.</p>
+        <ul>
+            <li>dl - Definerar en beskriven lista.</li>
+            <li>dt - Definerar en term i en beskriven lista.</li>
+            <li>dd - Beskriver termen i beskriven lista.</li>
+            <li>ol - Definerar en ordnad lista.</li>
+            <li>ul - Definerar en oordnad lista</li>
+            <li>li - Definerar ett punkt/artikel i en lista</li>
+        </ul>
+
+        <p>Exempel oordnad lista:</p>
+        <pre>
+        &lt;ul>
+            &lt;li>Hund&lt;/li>
+            &lt;li>Katt&lt;/li>
+            &lt;li>Hamster&lt;/li>
+        &lt;/ul>
+        </pre>
+        <p>Resultat:</p>
+        <ul>
+            <li>Hund</li>
+            <li>Katt</li>
+            <li>Hamster</li>
+        </ul>
+
+        <p>Exempel ordnad lista:</p>
+        <pre>
+        &lt;ol>
+            &lt;li>Hund&lt;/li>
+            &lt;li>Katt&lt;/li>
+            &lt;li>Hamster&lt;/li>
+        &lt;/ol>
+        </pre>
+
+        <p>Resultat:</p>
+        <ol>
+            <li>Hund</li>
+            <li>Katt</li>
+            <li>Hamster</li>
+        </ol>
+
+        <p>Exempel beskriven lista:</p>
+        <pre>
+        &lt;dl>
+            &lt;dt>Hund&lt;/dt>
+            &lt;dd>Hund (Canis lupus familiaris eller Canis lupus domesticus,[1] tidigare även Canis familiaris) är en domesticerad underart av varg (Canis lupus).&lt;/dd>
+            &lt;dt>Katt&lt;/dt>
+            &lt;dd>Katt (Felis catus[3][4][5][6]), även känd som tamkatt, är ett relativt litet, smygjagande rovdjur i familjen kattdjur[7][8][9] och ett vanligt sällskapsdjur i stora delar av världen. &lt;/dd>
+            &lt;dt>Hamster&lt;/dt>
+            &lt;dd>Hamstrar (Cricetinae) är en underfamilj av gnagare i familjen Cricetidae som omfattar 18 arter uppdelade i sju släkten.&lt;/dd>
+        &lt;/dl>
+        </pre>
+
+        <p>Resultat:</p>
+        <dl>
+            <dt>Hund</dt>
+            <dd>Hund (Canis lupus familiaris eller Canis lupus domesticus,[1] tidigare även Canis familiaris) är en
+                domesticerad underart av varg (Canis lupus).</dd>
+            <dt>Katt</dt>
+            <dd>Katt (Felis catus[3][4][5][6]), även känd som tamkatt, är ett relativt litet, smygjagande rovdjur i
+                familjen kattdjur[7][8][9] och ett vanligt sällskapsdjur i stora delar av världen.</dd>
+            <dt>Hamster</dt>
+            <dd>Hamstrar (Cricetinae) är en underfamilj av gnagare i familjen Cricetidae som omfattar 18 arter
+                uppdelade i sju släkten.</dd>
+        </dl>
+    </article>
+    <hr>
+    <article>
+        <h2>Tabell</h2>
+        <ul>
+            <li>caption - Definerar tabellens titel och måste skrivas först i tabelltaggen.</li>
+            <li>table - definerar tabellen</li>
+            <li>td - Definerar tabelldata.</li>
+            <li>th - Definerar en tabellrubrik.</li>
+            <li>tr - Definerar en rad i tabellen.</li>
+        </ul>
+
+        <p>Exempel:</p>
+        <pre>
+            &lt;table>
+                &lt;caption>Pristabell&lt;/caption>
+                &lt;tr>
+                    &lt;th>Produkt&lt;/th>
+                    &lt;th>Pris&lt;/th>
+                &lt;/tr>
+                &lt;tr>
+                    &lt;td>Kaffe&lt;/td>
+                    &lt;td>10 kr&lt;/td>
+                &lt;/tr>
+                &lt;tr>
+                    &lt;td>Bulle&lt;/td>
+                    &lt;td>15 kr&lt;/td>
+                &lt;/tr>
+            &lt;/table>
+
+        </pre>
+        <p>Resultat:</p>
+        <table>
+            <caption>Pristabell</caption>
+            <tr>
+                <th>Produkt</th>
+                <th>Pris</th>
+            </tr>
+            <tr>
+                <td>Kaffe</td>
+                <td>10 kr</td>
+            </tr>
+            <tr>
+                <td>Bulle</td>
+                <td>15 kr</td>
+            </tr>
+        </table>
+    </article>
+    <hr>
+    <article>
+        <h2>Bild</h2>
+        <h3>img</h3>
+        <p>Definerar en bild i ett dokument.</p>
+        <p>Exempel: &lt;img src="https://i.pinimg.com/originals/96/93/2a/96932aa793c687b73b3f1f3ad800bee5.jpg"
+            height="300" width="200"></p>
+        <p>Resultat:</p>
+        <img src="https://i.pinimg.com/originals/96/93/2a/96932aa793c687b73b3f1f3ad800bee5.jpg" height="300" width="200"
+            alt="Image not found">
+    </article>
+    <hr>
+    <article>
+        <h2>Bildkartor</h2>
+        <ul>
+            <li>map - definerar en bildkarta vilket är en bild med klickbara ytor.</li>
+            <li>area - definerar en klickbar area i en bildmapp</li>
+        </ul>
+        <p>Exempel:</p>
+        <pre>
+        &lt;img src="https://images-na.ssl-images-amazon.com/images/I/31dzl316DvL.jpg" width="100" height="100" usemap="#blackandwhite">
+
+        &lt;map name="blackandwhite">
+            &lt;area shape="rect" coords="0,0,50,50" href="https://en.wikipedia.org/wiki/White">
+            &lt;area shape="rect" coords="50,0,100,50" href="https://en.wikipedia.org/wiki/Black">
+            &lt;area shape="rect" coords="0,50,50,100" href="https://en.wikipedia.org/wiki/Black">
+            &lt;area shape="rect" coords="50,50,100,100" href="https://en.wikipedia.org/wiki/White">
+        &lt;/map>
+        </pre>
+        <p>Resultat:</p>
+        <img src="https://images-na.ssl-images-amazon.com/images/I/31dzl316DvL.jpg" width="100" height="100" usemap="#blackandwhite"
+            alt="Image not found">
+
+        <map name="blackandwhite">
+            <area shape="rect" coords="0,0,50,50" href="https://en.wikipedia.org/wiki/White" alt="Image not found">
+            <area shape="rect" coords="50,0,100,50" href="https://en.wikipedia.org/wiki/Black" alt="Image not found">
+            <area shape="rect" coords="0,50,50,100" href="https://en.wikipedia.org/wiki/Black" alt="Image not found">
+            <area shape="rect" coords="50,50,100,100" href="https://en.wikipedia.org/wiki/White" alt="Image not found">
+        </map>
+
+    </article>
 </body>
 
 </html>
