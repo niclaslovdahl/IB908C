@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1.2 Semantiska element för struktur</title>
+</head>
+
+<body>
+    <header>
+        <h1>Ett exempel på semantiska element för strukturer</h1>
+
+        <h5>I headern finner man ofta någon logga, rubrik till hemsidan och navigationsfältet.</h5>
+
+        <nav>
+            <a href="#1">Del 1</a>
+            <a href="#2">Del 2</a>
+        </nav>
+    </header>
+
+    <article>
+        <h2>Demo</h2>
+
+        <p>En article används för fristående content och en bra tumregel är att innehållet ska kunna distribueras
+            självständigt och fortfarande vara relevant.</p>
+
+        <section>
+            <h3 id="1">Del 1</h3>
+
+            <p>Man kan använda sections för att skapa delar av ett dokument i till exempel en article. En bra
+                tumregel är att
+                använda sections då man använder sig av nya underrubriker i ett dokument.</p>
+
+            <aside>
+                <p>Detta aside-elementet är rätt så meningslöst utan styling då tanken är att det ska användas för
+                    att
+                    visa
+                    information till höger eller vänster om viss content. Taggen är till exempel bra att använda
+                    för
+                    att visa ett citat kopplat till en löpande text eller för att visa adds på en sida.
+                </p>
+            </aside>
+
+            <p>Här fortsätter sektionen vidare för att demonstrera att aside elementet kan användas mitt i ett
+                löpande avsnitt.</p>
+        </section>
+
+        <section>
+            <h3 id="2">Del 2</h3>
+
+            <p>Detta är en annan section med egen underrubrik.</p>
+
+            <figure>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/d/d3/Phra_Ajan_Jerapunyo-Abbot_of_Watkungtaphao..jpg"
+                    height="200" width="300">
+                <figcaption>Meditation är inom västvärlden ett sammanfattande begrepp som innebär metoder för
+                    kroppslig och mental avslappning i kombination med koncentration på något föremål,
+                    föreställning eller företeelse.</figcaption>
+            </figure>
+
+            <p>Figure används för att hantera fristående element som till exempel diagram, bilder eller exempelkod.
+                Figcaption används för att lägga till en text till detta element.</p>
+        </section>
+
+        <footer>
+            <p>footer-taggen används för innehåll som ska placeras längst ner på sidan och används ofta för
+                information man vill visa för hela hemsidan.</p>
+
+            <details>
+                <summary>Sida skapad av Niclas</summary>
+                <p>Datum: 2 november 2018</p>
+            </details>
+
+            <p>details-taggen används för att låta användaren välja att dölja eller visa viss information. Summary
+                är den synliga klickbara rubriken för denna information.</p>
+        </footer>
+    </article>
+</body>
+
+</html>
