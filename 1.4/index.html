@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1.4 Formulär</title>
+</head>
+
+<body>
+    <h1>1.4 Formulär</h1>
+    <h2>Formulär</h2>
+
+    <form>
+        <fieldset>
+            <legend>Enrads textbox</legend>
+            <input type="text" placeholder="Skriv text här" name="text" autofocus required><br>
+            <input type="password" placeholder="Skriv lösenord här" title="Fler än 8 tecken" pattern=".{8,}" name="pass"
+                required>
+        </fieldset>
+
+        <fieldset>
+            <legend>Flerrads textbox</legend>
+            <textarea placeholder="Skriv text här" name="fritext"></textarea>
+        </fieldset>
+
+        <fieldset>
+            <legend>Checkbox</legend>
+            <label for="box1">Box 1</label>
+            <input type="checkbox" id="box1" name="checkit" value="box1"><br>
+            <label for="box2">Box 2</label>
+            <input type="checkbox" id="box2" name="checkit" value="box2"><br>
+            <label for="box3">Box 3</label>
+            <input type="checkbox" id="box3" name="checkit" value="box3">
+        </fieldset>
+
+        <fieldset>
+            <legend>Radio-knapp</legend>
+            <label for="radio1">Radio 1</label>
+            <input type="radio" id="radio1" name="selection" value="radio1" checked><br>
+            <label for="radio2">Radio 2</label>
+            <input type="radio" id="radio2" name="selection" value="radio2"><br>
+            <label for="radio3">Radio 3</label>
+            <input type="radio" id="radio3" name="selection" value="radio3">
+        </fieldset>
+
+        <fieldset>
+            <legend>Knapp</legend>
+            <input type="submit" value="Skicka">
+            <input type="image" src="https://banner2.kisspng.com/20180404/dgw/kisspng-button-computer-icons-clip-art-submit-button-5ac514dd121a33.2960571515228653730742.jpg"
+                width="50px">
+            <input type="reset" value="Återställ">
+            <input type="button" value="En knapp">
+        </fieldset>
+
+        <fieldset>
+            <legend>Lista</legend>
+            <select required>
+                <optgroup label="Grupp 1">
+                    <option value="alt1">Alternativ 1</option>
+                    <option value="alt2">Alternativ 2</option>
+                </optgroup>
+                <optgroup label="Grupp 2">
+                    <option value="alt3">Alternativ 3</option>
+                    <option value="alt4">Alternativ 4</option>
+                </optgroup>
+            </select>
+        </fieldset>
+    </form>
+</body>
+
+</html>
