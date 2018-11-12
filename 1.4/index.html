@@ -48,14 +48,14 @@
             <legend>Knapp</legend>
             <input type="submit" value="Skicka">
             <input type="image" src="https://banner2.kisspng.com/20180404/dgw/kisspng-button-computer-icons-clip-art-submit-button-5ac514dd121a33.2960571515228653730742.jpg"
-                width="50px">
+                alt="Image not found" width="50">
             <input type="reset" value="Återställ">
             <input type="button" value="En knapp">
         </fieldset>
 
         <fieldset>
             <legend>Lista</legend>
-            <select name="list" required>
+            <select name="list">
                 <optgroup label="Grupp 1">
                     <option value="alt1">Alternativ 1</option>
                     <option value="alt2">Alternativ 2</option>
@@ -70,23 +70,23 @@
         <fieldset>
             <legend>Nya HTML5-typerna</legend>
             <label for="email">E-post</label>
-            <input type="email" name="email" required><br>
+            <input type="email" id="email" name="email" required><br>
             <label for="url">URL</label>
-            <input type="url" name="url" required><br>
+            <input type="url" id="url" name="url" required><br>
             <label for="number">Nummer (1-999)</label>
-            <input type="number" name="number" min="1" max="999" step="1" required><br>
+            <input type="number" id="number" name="number" min="1" max="999" step="1" required><br>
             <label for="range">Omfång (1-999)</label>
-            <input type="range" name="range" min="1" max="999" list="values" step="1" required><br>
+            <input type="range" id="range" name="range" min="1" max="999" list="values" step="1"><br>
             <label for="datetime-local">Datum och tid</label>
-            <input type="datetime-local" name="datetime" required><br>
+            <input type="datetime-local" id="datetime-local" name="datetime" required><br>
             <label for="date">Datum</label>
-            <input type="date" name="date" required><br>
+            <input type="date" id="date" name="date" required><br>
             <label for="month">Månad</label>
-            <input type="month" name="month" required><br>
+            <input type="month" id="month" name="month" required><br>
             <label for="week">Vecka</label>
-            <input type="week" name="week" required><br>
+            <input type="week" id="week" name="week" required><br>
             <label for="time">Tid</label>
-            <input type="time" name="time" required><br>
+            <input type="time" id="time" name="time" required><br>
             Förslag till input till en enrads textbox:
             <input list="values" name="values" required>
             <datalist id="values">
@@ -97,6 +97,8 @@
             </datalist>
         </fieldset>
     </form>
+
+
 </body>
 
 </html>
