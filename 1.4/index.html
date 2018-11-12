@@ -11,7 +11,7 @@
     <h1>1.4 Formulär</h1>
     <h2>Formulär</h2>
 
-    <form>
+    <form action="https://people.dsv.su.se/~pierre/courses/05_ass/ip2/2/2.2.1/perl/example.cgi" method="GET">
         <fieldset>
             <legend>Enrads textbox</legend>
             <input type="text" placeholder="Skriv text här" name="text" autofocus required><br>
@@ -27,11 +27,11 @@
         <fieldset>
             <legend>Checkbox</legend>
             <label for="box1">Box 1</label>
-            <input type="checkbox" id="box1" name="checkit" value="box1"><br>
+            <input type="checkbox" id="box1" name="checkit[]" value="box1"><br>
             <label for="box2">Box 2</label>
-            <input type="checkbox" id="box2" name="checkit" value="box2"><br>
+            <input type="checkbox" id="box2" name="checkit[]" value="box2"><br>
             <label for="box3">Box 3</label>
-            <input type="checkbox" id="box3" name="checkit" value="box3">
+            <input type="checkbox" id="box3" name="checkit[]" value="box3">
         </fieldset>
 
         <fieldset>
@@ -55,7 +55,7 @@
 
         <fieldset>
             <legend>Lista</legend>
-            <select required>
+            <select name="list" required>
                 <optgroup label="Grupp 1">
                     <option value="alt1">Alternativ 1</option>
                     <option value="alt2">Alternativ 2</option>
@@ -65,6 +65,36 @@
                     <option value="alt4">Alternativ 4</option>
                 </optgroup>
             </select>
+        </fieldset>
+
+        <fieldset>
+            <legend>Nya HTML5-typerna</legend>
+            <label for="email">E-post</label>
+            <input type="email" name="email" required><br>
+            <label for="url">URL</label>
+            <input type="url" name="url" required><br>
+            <label for="number">Nummer (1-999)</label>
+            <input type="number" name="number" min="1" max="999" step="1" required><br>
+            <label for="range">Omfång (1-999)</label>
+            <input type="range" name="range" min="1" max="999" list="values" step="1" required><br>
+            <label for="datetime-local">Datum och tid</label>
+            <input type="datetime-local" name="datetime" required><br>
+            <label for="date">Datum</label>
+            <input type="date" name="date" required><br>
+            <label for="month">Månad</label>
+            <input type="month" name="month" required><br>
+            <label for="week">Vecka</label>
+            <input type="week" name="week" required><br>
+            <label for="time">Tid</label>
+            <input type="time" name="time" required><br>
+            Förslag till input till en enrads textbox:
+            <input list="values" name="values" required>
+            <datalist id="values">
+                <option value="Förslag 1">
+                <option value="Förslag 2">
+                <option value="Förslag 3">
+                <option value="Förslag 4">
+            </datalist>
         </fieldset>
     </form>
 </body>
