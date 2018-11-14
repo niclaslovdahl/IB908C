@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Grunderna i CSS 3</title>
+</head>
+
+<body>
+    <h1>Grunderna i CSS 3</h1>
+
+    <article>
+        <h2>Externt länkad CSS-fil och dess fördelar</h2>
+        <p>Externt länkad CSS-fil innebär att man separerar CSS från HTML i en egen fil. Fördelarna med detta är att
+            kan ha gemensamma stilregler för multipla filer och det kan underlätta om man har uppdelat arbete för css
+            och html i ett team</p>
+        <p>Externt länkad CSS-fil inkluderas genom följande rad kod förutsatt att din CSS-fil har namnet <code>style.css</code>.</p>
+        <code>
+            &lt;link rel="stylesheet" type="text/css" href="style.css">
+        </code>
+
+    </article>
+
+    <article>
+        <h2>Arv</h2>
+        <p>Arv i CSS fungerar så att CSS-regler till en specifik tagg ärvs ner till nästlade taggar. Till exempel en
+            CSS-regler applicerade till <code>&lt;body></code>-taggen blir automatiskt applicerade till alla
+            taggar på
+            sidan. Alla taggar ärvs inte ner av specifika skäl och en tumregel är att taggar som hanterar placering
+            inte ärvs. Till exempel så ärvs inte border ner eftersom det inte
+            är
+            sannolikt att man vill applicera det på alla element under.</p>
+        <p>Följande CSS-regel gör att all text på sidan kommer att bli blå.</p>
+        <code>
+            body {<br>
+            &emsp;color: blue;<br>
+            }
+        </code>
+    </article>
+
+    <article>
+        <h2>Cascade</h2>
+        <p>Cascade står för en vattenfallsmodell när det kommer till arv i CSS. Det finns olika regler för hur regler
+            ärvs.</p>
+
+        <h3>Ärvda regler slås ihop</h3>
+        <p>Om regler ärvs från två olika taggar så slås dom automatiskt samman. Detta kan vanligtvis hända då man har
+            nästlade taggar med flera förfäder. </p>
+
+        <h3>Närmsta förfader vinner</h3>
+        <p>Om en konflikt skulle uppstå där samma regel ärvs från två olika förfäder så gäller det att närmsta
+            förfadern vinner.</p>
+
+        <h3>Direkt applicerad regel vinner alltid</h3>
+        <p>Eftersom direkt applicerad stil är närmre elementet än den närmsta förfadern så kommer den alltid att vinna
+            vid konflikter.</p>
+
+        <h3>En tagg, flera stilar</h3>
+        <p>Om det inte uppstår några konflikter slås reglerna ihop precis som i multipla arv. Om det uppstår konflikter
+            används "Specificity" för att bedöma vilken av reglerna som ska användas. Webläsaren använder sig av ett
+            poängsystem där selectorer i följd adderas och högst poäng vinner. Om poängen blir lika så används den
+            sensate listade regeln i CSS-filen. Se poäng nedan.</p>
+        <ul>
+            <li>Tagg-stil (specificity = 1)</li>
+            <li>Klass-stil (specificity = 10)</li>
+            <li>ID-stil (specificity = 100)</li>
+        </ul>
+    </article>
+
+    <article>
+        <h2>Selektorer</h2>
+        <p>Varje CSS-stil består av selektor och deklarationsblocket. Selektorn bestämmer vad det är som ska appliceras
+            stil på och deklarationsblocket bestämmer vad det är för stil. I exemplet nedan är selektorn i fet text och
+            deklarationsblocket är hakparenteserna och allt innanför dessa.</p>
+        <code>
+            <strong>body</strong> {<br>
+            &emsp;color: blue;<br>
+            }
+        </code>
+        <p></p>
+    </article>
+</body>
+
+</html>
