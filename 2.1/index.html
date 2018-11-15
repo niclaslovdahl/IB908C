@@ -14,7 +14,7 @@
     <article>
         <h2>Externt länkad CSS-fil och dess fördelar</h2>
         <p>Externt länkad CSS-fil innebär att man separerar CSS från HTML i en egen fil. Fördelarna med detta är att
-            kan ha gemensamma stilregler för multipla filer och det kan underlätta om man har uppdelat arbete för css
+            kan ha gemensamma stilregler för multipla filer och det kan underlätta om man har uppdelat arbete för CSS
             och html i ett team</p>
         <p>Externt länkad CSS-fil inkluderas genom följande rad kod förutsatt att din CSS-fil har namnet <code>style.css</code>.</p>
         <code>
@@ -27,11 +27,9 @@
         <h2>Arv</h2>
         <p>Arv i CSS fungerar så att CSS-regler till en specifik tagg ärvs ner till nästlade taggar. Till exempel en
             CSS-regler applicerade till <code>&lt;body></code>-taggen blir automatiskt applicerade till alla
-            taggar på
-            sidan. Alla taggar ärvs inte ner av specifika skäl och en tumregel är att taggar som hanterar placering
-            inte ärvs. Till exempel så ärvs inte border ner eftersom det inte
-            är
-            sannolikt att man vill applicera det på alla element under.</p>
+            taggar på sidan. Alla taggar ärvs inte ner av specifika skäl och en tumregel är att taggar som hanterar
+            placering inte ärvs. Till exempel så ärvs inte border ner eftersom det inte är sannolikt att man vill
+            applicera det på alla element under.</p>
         <p>Följande CSS-regel gör att all text på sidan kommer att bli blå.</p>
         <code>
             body {<br>
@@ -59,9 +57,9 @@
 
         <h3>En tagg, flera stilar</h3>
         <p>Om det inte uppstår några konflikter slås reglerna ihop precis som i multipla arv. Om det uppstår konflikter
-            används "Specificity" för att bedöma vilken av reglerna som ska användas. Webläsaren använder sig av ett
-            poängsystem där selectorer i följd adderas och högst poäng vinner. Om poängen blir lika så används den
-            sensate listade regeln i CSS-filen. Se poäng nedan.</p>
+            används "Specificity" för att bedöma vilken av reglerna som ska användas. Webbläsaren använder sig av ett
+            poängsystem där selektorer i följd adderas och högst poäng vinner. Om poängen blir lika så används den
+            senaste listade regeln i CSS-filen. Se poäng nedan.</p>
         <ul>
             <li>Tagg-stil (specificity = 1)</li>
             <li>Klass-stil (specificity = 10)</li>
@@ -79,7 +77,92 @@
             &emsp;color: blue;<br>
             }
         </code>
-        <p></p>
+        <h3>Tagg-selektor</h3>
+        <p>Tagg-selektorer används för att göra förändringar till specifika taggar på en sida och är användbart om man
+            vill göra förändringar till flera element av samma tagg. Se exempel på tagg-selektor nedan.</p>
+        <code>
+            p {<br>
+            &emsp;font-size: 18px;<br>
+            }
+        </code>
+        <h3>Attribut-selektorer</h3>
+        <p>Attribut-selektorer gör det möjligt att ge stil till element som har blivit tilldelade ett specifikt
+            attribut. Se exempel på attribut-selektor nedan.</p>
+        <code>
+            input[type="button"] {<br>
+            &emsp;color: red;<br>
+            }
+        </code>
+        <h3>Klass-selektorer</h3>
+        <p>Klass-selektorer är bra att använda då man ska styla ett specifikt element annorlunda från andra element på
+            sidan. Man applicerar klass-selektorn genom att ange klassens namn i HTML-taggen. Klass-selektorer börjar
+            med punk och måste börja med en bokstav efter punkten. Se exempel på klass-selektor nedan.</p>
+        <code>
+            .classSelectorExample {<br>
+            &emsp;font-family: "Times New Roman", Times, serif;<br>
+            }
+        </code>
+        <h3>ID-selektorer</h3>
+        <p>ID-selektorer fungerar på samma sätt som klass-selektorer och har inga fördelar förutom id kan användas av
+            andra anledningar i JavaScript på en sida. Se exempel på ID-selektor nedan.</p>
+        <code>
+            #idSelectorExample {<br>
+            &emsp;color: black;<br>
+            }
+        </code>
+        <h3>Barn-selektorer</h3>
+        <p>Barn-selektorer innebär att man vill ge stil till ett element som är direkt barn till ett specifikt element.
+            Regeln gäller alltså endast för barn som är direkt nästlade till det givna elementet. Se exempel på
+            barn-element nedan.</p>
+        <code>
+            body > p {<br>
+            &emsp;color: pink;<br>
+            }
+        </code>
+    </article>
+
+    <article>
+        <h2>Enheter</h2>
+        <p>CSS använder sig av olika enheter för att ange en storlek på ett värde för en regel. Dessa består av
+            absoluta och relativa enheter.</p>
+        <h3>Absoluta enheter</h3>
+        <ul>
+            <li>in - inches</li>
+            <li>cm - centimeter</li>
+            <li>mm - millimeter</li>
+            <li>pt - punkter</li>
+            <li>pc - picas</li>
+            <li>px - pixlar</li>
+        </ul>
+        <h3>Relativa enheter</h3>
+        <ul>
+            <li>em - relativ till font-size av elementet</li>
+            <li>ex - relativ till x-height av den aktuella fonten</li>
+            <li>% - relativ till förfader-elementet</li>
+        </ul>
+    </article>
+
+    <article>
+        <h2>Hur ett CSS-dokument är uppbyggt</h2>
+        <p>Ett CSS-dokument består oftast av flera CSS-regler. Som tidigare nämnt består dessa CSS-regler av en
+            selektor och ett deklarationsblock. Hur CSS-reglerna fungerar har beskrivits i tidigare avsnitt. Se exempel
+            på hur ett CSS-dokument kan se ut nedan.</p>
+        <code>
+            body {<br>
+            &emsp;color: pink;<br>
+            }<br>
+            <br>
+            body > p {<br>
+            &emsp;color: yellow;<br>
+            &emsp;font-family: "Times New Roman", Times, serif;<br>
+            }<br>
+            <br>
+            .box {<br>
+            &emsp;padding: 25px 50px 75px 100px;<br>
+            &emsp;border-style: solid;<br>
+            &emsp;border-width: 5px;<br>
+            }
+        </code>
     </article>
 </body>
 
