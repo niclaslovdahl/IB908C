@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>2.2 Text och listor</title>
+</head>
+
+<body>
+    <h1>2.2 Text och listor</h1>
+    <article>
+        <h2>Fontfamiljer</h2>
+        <h3>Serif</h3>
+        <p>Serif är bra att använda när man ska presentera långa stycken text. Detta är för att "fötterna" för
+            serif-fonter
+            gör att text är lättare läsa. Nedan visas ett exempel på serif-font i löpande text.</p>
+        <p class="serif">Amet anim sunt irure veniam nostrud aute velit velit officia nulla deserunt deserunt Lorem. Id
+            ad
+            nulla ea eu duis officia laboris ad. Ut aliqua mollit qui cillum nisi duis velit proident irure eiusmod. Ex
+            commodo ex et deserunt mollit ea ea dolore qui laboris. Ex nisi voluptate ex mollit nostrud do laborum
+            aliqua
+            irure eu non ad tempor qui. Dolor consectetur ad eu aliqua ea sunt sint proident id veniam ex amet
+            consectetur
+            pariatur. Nostrud cupidatat occaecat exercitation ad.</p>
+        <h3>Sans-serif</h3>
+        <p>Sans-serif-fonter används ofta för rubriker då utseendet är mer simpelt och avskalat. Exempel på
+            sans-serif-font som rubrik nedan.</p>
+        <h2 class="sans-serif">Rubrik</h2>
+        <h3>Monospace</h3>
+        <p>Monospace-fonter är fonter där alla bokstäver i fonten har samma bredd. Det används bland annat för att visa
+            upp exempelkod på en sida. Exempel på monospace-font visas nedan.</p>
+        <p class="monospace">
+            public class HelloWorld {<br>
+            <br>
+            &emsp;public static void main(String []args) {<br>
+            &emsp;&emsp;System.out.println("Hello World");<br>
+            &emsp;}<br>
+            }
+        </p>
+    </article>
+    <hr>
+    <article>
+        <h2>Enheter</h2>
+        <h3>Nyckelord</h3>
+        <p>CSS har sju nyckelord som justerar storleken i förhållande till den angivna basstorleken. Dessa är:</p>
+        <ul>
+            <li class="xx-small">xx-small</li>
+            <li class="x-small">x-small</li>
+            <li class="small">small</li>
+            <li class="medium">medium</li>
+            <li class="large">large</li>
+            <li class="x-large">x-large</li>
+            <li class="xx-large">xx-large</li>
+        </ul>
+        <h3>%</h3>
+        <p>Procent kan användas för att göra procentuella storleksförändringar i förhållande till basstorleken.
+            Procenten beräknas efter eventuella arv.</p>
+        <h3>em</h3>
+        <p>Em fungerar på exakt samma sätt som procent och 1em är samma sak som 100%. Till exempel blir då 2em 200% och
+            0.75 em 75%.</p>
+    </article>
+    <hr>
+    <article>
+        <h2>Färg</h2>
+        <h3>color</h3>
+        <p>color-egenskapen färg på text. Se exempel.</p>
+        <p>CSS</p>
+        <code>
+            .color {<br>
+            &emsp;color: red;<br>
+            }
+        </code>
+        <p>HTML</p>
+        <code>
+            &lt;p class="color">Fugiat consectetur ut culpa eu veniam enim id aute pariatur. Eu ullamco enim eiusmod
+            duis
+            mollit aliqua eiusmod consectetur culpa laboris magna. Dolore nulla cupidatat commodo dolor est eiusmod
+            aliqua magna esse do nisi deserunt nulla.&lt;/p>
+        </code>
+        <p>Resultat:</p>
+        <p class="color">Fugiat consectetur ut culpa eu veniam enim id aute pariatur. Eu ullamco enim eiusmod duis
+            mollit aliqua eiusmod consectetur culpa laboris magna. Dolore nulla cupidatat commodo dolor est eiusmod
+            aliqua magna esse do nisi deserunt nulla.</p>
+    </article>
+    <hr>
+    <article>
+        <h2>Teckensnitt</h2>
+        <h3>font</h3>
+        <p>font-egenskapen är en sammansättning av flera font-egenskaper (font-style, font-variant, font-weight,
+            font-size/line-height, font-family) som gör det möjligt att ändra utseende på text. Se exempel.</p>
+        <p>CSS</p>
+        <code>
+            .font {<br>
+            &emsp;font: italic bold small-caps 18px 'Courier New', Courier, monospace;<br>
+            }
+        </code>
+        <p>HTML</p>
+        <code>
+            &lt;p class="font">Custom font text&lt;/p>
+        </code>
+        <p>Resultat:</p>
+        <p class="font">Custom font text</p>
+    </article>
+    <hr>
+    <article>
+        <h2>Listor</h2>
+        <h3>list-style</h3>
+        <p>list-style-egenskapen är en sammansättning av flera list-egenskaper (list-style-type, list-style-position,
+            list-style-image). Se exempel nedan.</p>
+        <p>CSS</p>
+        <code>
+            .list-style {<br>
+            &emsp;list-style: square inside;<br>
+            }
+        </code>
+        <p>HTML</p>
+        <code>
+            &lt;ul class="list-style"><br>
+            &emsp;&lt;li>item 1&lt;/li><br>
+            &emsp;&lt;li>item 2&lt;/li><br>
+            &emsp;&lt;li>item 3&lt;/li><br>
+            &lt;/ul>
+        </code>
+        <p>Resultat:</p>
+        <ul class="list-style">
+            <li>item 1</li>
+            <li>item 2</li>
+            <li>item 3</li>
+        </ul>
+    </article>
+</body>
+
+</html>

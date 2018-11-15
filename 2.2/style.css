@@ -1,0 +1,51 @@
+.serif {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.sans-serif {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.monospace {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.xx-small {
+    font-size: xx-small;
+}
+
+.x-small {
+    font-size: x-small;
+}
+
+.small {
+    font-size: small;
+}
+
+.medium {
+    font-size: medium;
+}
+
+.large {
+    font-size: large;
+}
+
+.x-large {
+    font-size: x-large;
+}
+
+.xx-large {
+    font-size: xx-large;
+}
+
+.color {
+    color: red;
+}
+
+.font {
+    font: italic bold small-caps 18px 'Courier New', Courier, monospace;
+}
+
+.list-style {
+    list-style: square inside;
+}
