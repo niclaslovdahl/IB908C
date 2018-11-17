@@ -1,0 +1,8 @@
+.p-border {
+    border: 2px solid cyan;
+}
+
+.p-border-margin {
+    border: 2px solid red;
+    margin: 50px 30px 50px 30px;
+}
