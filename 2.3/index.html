@@ -11,37 +11,165 @@
 <body>
     <h1>2.3 Marginaler, kantlinjer och paddning</h1>
 
-    <h2>Marginaler</h2>
-    <h3>margin</h3>
-    <p>margin-egenskapen används för att skapa utrymme runt element. Se exempel.</p>
-    <p>CSS</p>
-    <code>
-        .p-border {<br>
-        &emsp;border: 2px solid cyan;<br>
-        }<br>
-        <br>
-        .p-border-margin {<br>
-        &emsp;border: 2px solid red;<br>
-        &emsp;margin: 50px 30px 50px 30px;<br>
-        }
-    </code>
-    <p>HTML</p>
-    <code>
-        &lt;p class="p-border">Tempor eu veniam excepteur est in quis tempor ut commodo incididunt amet incididunt<br>
-        dolor. Labore ullamco adipisicing ut reprehenderit culpa nulla.&lt;/p><br>
-        &lt;p class="p-border-margin">Exercitation adipisicing cupidatat deserunt exercitation. Eiusmod Lorem nisi ad<br>
-        ex incididunt fugiat est quis sit fugiat magna do minim enim.&lt;/p><br>
-        &lt;p class="p-border">Tempor eu veniam excepteur est in quis tempor ut commodo incididunt amet incididunt<br>
-        dolor. Labore ullamco adipisicing ut reprehenderit culpa nulla.&lt;/p>
-    </code>
-    <p>Resultat:</p>
-    <p class="p-border">Tempor eu veniam excepteur est in quis tempor ut commodo incididunt amet incididunt dolor.
-        Labore ullamco adipisicing ut reprehenderit culpa nulla.</p>
-    <p class="p-border-margin">Exercitation adipisicing cupidatat deserunt exercitation. Eiusmod Lorem nisi ad ex
-        incididunt fugiat est quis sit fugiat magna do minim enim.</p>
-    <p class="p-border">Tempor eu veniam excepteur est in quis tempor ut commodo incididunt amet incididunt dolor.
-        Labore ullamco adipisicing ut reprehenderit culpa nulla.</p>
+    <article>
+        <h2>Marginaler</h2>
+        <h3>margin</h3>
+        <p>margin-egenskapen används för att skapa utrymme runt element. Border används också för att förtydliga denna
+            egenskap. Se exempel.</p>
+        <p>CSS</p>
+        <code>
+            .p-border {<br>
+            &emsp;border: 2px solid cyan;<br>
+            }<br>
+            <br>
+            .p-border-margin {<br>
+            &emsp;border: 2px solid red;<br>
+            &emsp;margin: 50px 30px 50px 30px;<br>
+            }
+        </code>
+        <p>HTML</p>
+        <code>
+            &lt;p class="p-border">Tempor eu veniam excepteur est in quis tempor ut commodo incididunt amet incididunt<br>
+            dolor. Labore ullamco adipisicing ut reprehenderit culpa nulla.&lt;/p><br>
+            &lt;p class="p-border-margin">Exercitation adipisicing cupidatat deserunt exercitation. Eiusmod Lorem
+            nisiad<br>
+            ex incididunt fugiat est quis sit fugiat magna do minim enim.&lt;/p><br>
+            &lt;p class="p-border">Tempor eu veniam excepteur est in quis tempor ut commodo incididunt amet incididunt<br>
+            dolor. Labore ullamco adipisicing ut reprehenderit culpa nulla.&lt;/p>
+        </code>
+        <p>Resultat:</p>
+        <p class="p-border">Tempor eu veniam excepteur est in quis tempor ut commodo incididunt amet incididunt dolor.
+            Labore ullamco adipisicing ut reprehenderit culpa nulla.</p>
+        <p class="p-border-margin">Exercitation adipisicing cupidatat deserunt exercitation. Eiusmod Lorem nisi ad ex
+            incididunt fugiat est quis sit fugiat magna do minim enim.</p>
+        <p class="p-border">Tempor eu veniam excepteur est in quis tempor ut commodo incididunt amet incididunt dolor.
+            Labore ullamco adipisicing ut reprehenderit culpa nulla.</p>
+    </article>
+    <hr>
+    <article>
+        <h2>Kantlinjer</h2>
+        <h3>border</h3>
+        <p>border-egenskapen används specifiera vilken stil, bredd och färg en kantlinje kan ska ha. Egenskapen är
+            sammansättning av border-width, border-style och border-color. Se exempel.</p>
+        <p>CSS</p>
+        <code>
+            .h4-border {<br>
+            &emsp;border: 4px solid springgreen;<br>
+            }<br>
+            <br>
+            .h5-border {<br>
+            &emsp;border: 4px solid darkmagenta;<br>
+            }
+        </code>
+        <p>HTML</p>
+        <code>
+            &lt;h4 class="h4-border">posuere morbi leo urna molestie&lt;/h4><br>
+            &lt;h5 class="h5-border">tortor at risus viverra adipiscing&lt;/h5>
+        </code>
+        <p>Resultat:</p>
+        <h4 class="h4-border">posuere morbi leo urna molestie</h4>
+        <h5 class="h5-border">tortor at risus viverra adipiscing</h5>
+        <h3>border-color</h3>
+        <p>border-color kan ha en till fyra värden och sätter färg på en borders fyra olika väggar. Se exempel.</p>
+        <p>CSS</p>
+        <code>
+            .h4-border-color {<br>
+            &emsp;border: 4px solid;<br>
+            &emsp;border-color: red green blue yellow;<br>
+            }
+        </code>
+        <p>HTML</p>
+        <code>
+            &lt;h4 class="h4-border-color">neque laoreet suspendisse interdum consectetur&lt;/h4>
+        </code>
+        <p>Resultat:</p>
+        <h4 class="h4-border-color">neque laoreet suspendisse interdum consectetur</h4>
+        <h3>border-style</h3>
+        <p>border-style sätter stilen på kantlinjen för vardera sida. Se exempel.</p>
+        <p>CSS</p>
+        <code>
+            .h4-border-style {<br>
+            &emsp;border: 4px;<br>
+            &emsp;border-style: dotted solid dashed groove;<br>
+            }
+        </code>
+        <p>HTML</p>
+        <code>
+            &lt;h4 class="h4-border-color">erat imperdiet sed euismod nisi&lt;/h4>
+        </code>
+        <h4 class="h4-border-style">erat imperdiet sed euismod nisi</h4>
+        <h3>border-width</h3>
+        <p>border-width sätter tjockleken på kantlinjen för vardera sida. Se exempel.</p>
+        <p>CSS</p>
+        <code>
+            .h4-border-width {<br>
+            &emsp;border: solid;<br>
+            &emsp;border-width: 4px 2px 10px 6px;<br>
+            }
+        </code>
+        <p>HTML</p>
+        <code>
+            &lt;h4 class="h4-border-width">in aliquam sem fringilla ut&lt;/h4>
+        </code>
+        <p>Resultat:</p>
+        <h4 class="h4-border-width">in aliquam sem fringilla ut</h4>
+    </article>
+    <hr>
+    <article>
+        <h2>Padding</h2>
+        <h3>padding</h3>
+        <p>padding används för att skapa utrymme runt ett visst element men innanför kantlinjen. Detta är altså inte
+            samma sak som margin som hanterar utrymmet utanför kantlinjen. Se exempel.</p>
+        <p>CSS</p>
+        <code>
+            .p-border {<br>
+            &emsp;border: 2px solid cyan;<br>
+            }<br>
+            <br>
+            .p-border-padding {<br>
+            &emsp;border: 2px solid red;<br>
+            &emsp;padding: 50px 30px 50px 30px;<br>
+            }
+        </code>
+        <p>HTML</p>
+        <code>
+            &lt;p class="p-border">Tempor eu veniam excepteur est in quis tempor ut commodo incididunt amet incididunt<br>
+            dolor. Labore ullamco adipisicing ut reprehenderit culpa nulla.&lt;/p><br>
+            &lt;p class="p-border-padding">Exercitation adipisicing cupidatat deserunt exercitation. Eiusmod Lorem
+            nisiad<br>
+            ex incididunt fugiat est quis sit fugiat magna do minim enim.&lt;/p><br>
+            &lt;p class="p-border">Tempor eu veniam excepteur est in quis tempor ut commodo incididunt amet incididunt<br>
+            dolor. Labore ullamco adipisicing ut reprehenderit culpa nulla.&lt;/p>
+        </code>
+        <p>Resultat:</p>
+        <p class="p-border">Tempor eu veniam excepteur est in quis tempor ut commodo incididunt amet incididunt dolor.
+            Labore ullamco adipisicing ut reprehenderit culpa nulla.</p>
+        <p class="p-border-padding">Exercitation adipisicing cupidatat deserunt exercitation. Eiusmod Lorem nisi ad ex
+            incididunt fugiat est quis sit fugiat magna do minim enim.</p>
+        <p class="p-border">Tempor eu veniam excepteur est in quis tempor ut commodo incididunt amet incididunt dolor.
+            Labore ullamco adipisicing ut reprehenderit culpa nulla.</p>
+    </article>
+    <hr>
+    <article>
+        <h2>Outlines</h2>
+        <h3>outlines</h3>
+        <p>outline är en kantlinje som dras direkt utanför en evetuell border-kantlinje. outline består av
+            outline-width, outline-style och outline-color. border är även med i exempel för bättre tydlighet. Se
+            exempel nedan.</p>
+        <p>CSS</p>
+        <code>
+            .h4-outline {<br>
+            &emsp;border: 2px solid blue;<br>
+            &emsp;outline: 4px dotted red<br>
+            }
+        </code>
+        <p>HTML</p>
+        <code>
+            &lt;h4 class="h4-outline">arcu non odio euismod lacinia&lt;/h4>
+        </code>
+        <p>Resultat:</p>
+        <h4 class="h4-outline">arcu non odio euismod lacinia</h4>
+    </article>
 </body>
-
 
 </html>
