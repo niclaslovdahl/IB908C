@@ -170,7 +170,7 @@
     <article>
         <h2>Outlines</h2>
         <h3>outlines</h3>
-        <p>outline är en kantlinje som dras direkt utanför en evetuell border-kantlinje. outline består av
+        <p>outline är en kantlinje som dras direkt utanför en eventuell border-kantlinje. outline består av
             outline-width, outline-style och outline-color. border är även med i exempel för bättre tydlighet. Se
             exempel nedan.</p>
         <p>CSS</p>
@@ -190,8 +190,80 @@
     <hr>
     <article>
         <h2>Synlighet</h2>
-        <h3>visability</h3>
-        <p></p>
+        <h3>visibility</h3>
+        <p>Egenskapen specificerar om ett element ska vara synligt eller ej. Elementet tar upp plats trots att det inte
+            är synligt. Se exempel.</p>
+        <p>CSS</p>
+        <code>
+            .h4-visibility {<br>
+            &emsp;visibility: hidden;<br>
+            }
+        </code>
+        <p>HTML</p>
+        <code>
+            &lt;h4 class="h4-visibility">dignissim suspendisse in est ante&lt;/h4>
+        </code>
+        <p>Resultat:</p>
+        <h4 class="h4-visibility">dignissim suspendisse in est ante</h4>
+        <h3>clip-path</h3>
+        <p>clip-path används till visa ett specifikt område av ett element. Se exempel.</p>
+        <p>CSS</p>
+        <code>
+            .img-clip-path {<br>
+            &emsp;clip-path: circle(50%);<br>
+            &emsp;height: 30%;<br>
+            &emsp;width: 30%;<br>
+            }
+        </code>
+        <p>HTML</p>
+        <code>
+            &lt;img class="img-clip-path"
+            src="https://upload.wikimedia.org/wikipedia/commons/b/bf/Bucephala-albeola-010.jpg" alt="No image found">
+        </code>
+        <p>Resulat:</p>
+        <img class="img-clip-path" src="https://upload.wikimedia.org/wikipedia/commons/b/bf/Bucephala-albeola-010.jpg"
+            alt="No image found">
+        <h3>display</h3>
+        <p>display definierar vilken typ av visningsbox som ska användas för elementet. Typerna är uppdelade i yttre och
+            inre visningstyper där de yttre hanterar hur visningsboxen ska bete sig i förhållande till element på samma
+            nivå, och de inre hanterar hur barn till elementet ska hanteras. Se exempel.</p>
+        <p>CSS</p>
+        <code>
+            .span-display {<br>
+            &emsp;display: block;<br>
+            &emsp;color: blue;<br>
+            }
+        </code>
+        <p>HTML</p>
+        <code>
+            &lt;p>Culpa laboris dolore ipsum dolor laboris nostrud id aliqua sunt. Aliquip reprehenderit non
+            adipisicing proident ea esse velit est. Esse qui amet ullamco ex non nostrud officia. &lt;span
+            class="span-display">Sit laborum culpa&lt;/span> occaecat reprehenderit in laboris aute ipsum sit eu mollit
+            labore dolor. Et veniam tempor sunt occaecat incididunt cillum incididunt nisi nisi.&lt;/p>
+        </code>
+        <p>Resultat:</p>
+        <p>Culpa laboris dolore ipsum dolor laboris nostrud id aliqua sunt. Aliquip reprehenderit non adipisicing
+            proident ea esse velit est. Esse qui amet ullamco ex non nostrud officia. <span class="span-display">Sit
+                laborum culpa</span> occaecat reprehenderit in laboris aute ipsum sit eu mollit labore dolor. Et veniam
+            tempor sunt occaecat incididunt cillum incididunt nisi nisi.</p>
+        <h3>overflow</h3>
+        <p>overflow hanterar vad som ska hända om en innehållet fyller mer än visningsboxens storlek. Se exempel.</p>
+        <p>CSS</p>
+        <code>
+            .p-overflow {<br>
+            &emsp;width: 200px;<br>
+            &emsp;height: 100px;<br>
+            &emsp;overflow: scroll;<br>
+            }
+        </code>
+        <p>HTML</p>
+        &lt;p class="p-overflow">Consectetur esse non ex voluptate ullamco reprehenderit veniam do adipisicing nulla.
+        Elit ad et excepteur et culpa est dolore ut sint do ex excepteur ut. Mollit velit eu sunt amet. Eu id nisi quis
+        ipsum consequat incididunt exercitation ullamco aliqua.&lt;/p>
+        <p>Resultat:</p>
+        <p class="p-overflow">Consectetur esse non ex voluptate ullamco reprehenderit veniam do adipisicing nulla. Elit
+            ad et excepteur et culpa est dolore ut sint do ex excepteur ut. Mollit velit eu sunt amet. Eu id nisi quis
+            ipsum consequat incididunt exercitation ullamco aliqua.</p>
     </article>
 </body>
 

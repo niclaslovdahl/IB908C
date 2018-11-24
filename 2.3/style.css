@@ -39,3 +39,24 @@
     border: 2px solid blue;
     outline: 4px dotted red;
 }
+
+.h4-visibility {
+    visibility: hidden;
+}
+
+.img-clip-path {
+    clip-path: circle(35%);
+    height: 30%;
+    width: 30%;
+}
+
+.span-display {
+    display: block;
+    color: blue;
+}
+
+.p-overflow {
+    width: 200px;
+    height: 100px;
+    overflow: scroll;
+}
