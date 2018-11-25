@@ -224,7 +224,8 @@
         <img class="img-clip-path" src="https://upload.wikimedia.org/wikipedia/commons/b/bf/Bucephala-albeola-010.jpg"
             alt="No image found">
         <h3>display</h3>
-        <p>display definierar vilken typ av visningsbox som ska användas för elementet. Typerna är uppdelade i yttre och
+        <p>display definierar vilken typ av visningsbox som ska användas för elementet. Typerna är uppdelade i yttre
+            och
             inre visningstyper där de yttre hanterar hur visningsboxen ska bete sig i förhållande till element på samma
             nivå, och de inre hanterar hur barn till elementet ska hanteras. Se exempel.</p>
         <p>CSS</p>
@@ -264,6 +265,111 @@
         <p class="p-overflow">Consectetur esse non ex voluptate ullamco reprehenderit veniam do adipisicing nulla. Elit
             ad et excepteur et culpa est dolore ut sint do ex excepteur ut. Mollit velit eu sunt amet. Eu id nisi quis
             ipsum consequat incididunt exercitation ullamco aliqua.</p>
+        <h3>Transparant visningsbox</h3>
+        <p>Man kan göra ett element eller en visningsbox ransparant genom att använda sig av rbga-funktionen eller
+            genom egenskapen opacity. rbga-funktionen tar emot värden mellan 0 till 255 för röd, grön och blå samt ett
+            alphavärde mellan 0 och 1 som bestämmer hur transparant färgen ska vara. Opacity definerar hur transparant
+            ett element ska vara genom alpha värde mellan 0 och 1. Se exempel.</p>
+        <p>CSS</p>
+        <code>
+            .div-rgba-filled {<br>
+            &emsp;width: 200px;<br>
+            &emsp;height: 100px;<br>
+            &emsp;background-color: rgba(137, 20, 255, 1);<br>
+            }<br>
+            <br>
+            .div-rgba-opacity {<br>
+            &emsp;width: 200px;<br>
+            &emsp;height: 100px;<br>
+            &emsp;background-color: rgba(137, 20, 255, 0.2);<br>
+            }
+        </code>
+        <p>HTML</p>
+        <code>
+            &lt;div class="div-rgba-filled">&lt;/div><br>
+            &lt;div class="div-rgba-opacity">&lt;/div>
+        </code>
+        <p>Resultat:</p>
+        <div class="div-rgba-filled"></div>
+        <div class="div-rgba-opacity"></div>
+        <h3>Visningsbox med rundade hörn</h3>
+        <p>Det går att åstadkomma rundade hörn på en kantlinje genom att använda egenskapen border-radius. Se exempel.</p>
+        <p>CSS</p>
+        <code>
+            .div-boder-radius {<br>
+            &emsp;width: 200px;<br>
+            &emsp;height: 100px;<br>
+            &emsp;border: 4px groove orangered;<br>
+            &emsp;border-radius: 50px 10px 100px 20px;<br>
+            }
+        </code>
+        <p>HTML</p>
+        <code>
+            &lt;div class="div-border-radius">&lt;/div>
+        </code>
+        <p>Resultat:</p>
+        <div class="div-border-radius"></div>
+        <h3>Multipla bakgrundsbilder</h3>
+        <p>Man kan applicera multipla bakgrundsbilder till element och dessa läggs då som flera lager på varandra. Man
+            använder sig av background-egenskapen och dess olika subegenskaper förutom background-color som inte
+            fungerar vid multipla bakgrunder. Se exempel.</p>
+        <p>CSS</p>
+        <code>
+            .div-multiple-backgrounds {<br>
+            &emsp;width: 800px;<br>
+            &emsp;height: 800px;<br>
+            &emsp;background-image:
+            url(https://upload.wikimedia.org/wikipedia/commons/4/47/PNG_transparency_demonstration_1.png),
+            linear-gradient(to bottom, rgba(135, 65, 240, 0.8), rgba(100, 234, 54, 0.8));<br>
+            &emsp;background-repeat: no-repeat, no-repeat;<br>
+            &emsp;background-position: center, center;<br>
+            }
+        </code>
+        <p>HTML</p>
+        &lt;div class="div-multiple-backgrounds">&lt;/div>
+        <p>Resultat:</p>
+        <div class="div-multiple-backgrounds"></div>
+        <h3>Skuggor</h3>
+        <p>Man kan använda sig av box-shadow-egenskapen för att ge ett element skugga. Se exempel.</p>
+        <p>CSS</p>
+        <code>
+            .div-box-shadow {<br>
+            &emsp;width: 200px;<br>
+            &emsp;height: 100px;<br>
+            &emsp;background-color: rgba(137, 20, 255, 0.2);<br>
+            &emsp;box-shadow: 5px 10px lightslategray;<br>
+            }
+        </code>
+        <p>HTML</p>
+        <code>
+            &lt;div class="div-box-shadow">&lt;/div>
+        </code>
+        <p>Resultat:</p>
+        <div class="div-box-shadow"></div>
+        <h3>Gradienter</h3>
+        <p>Gradienter kan skapas med hjälp av CSS-funktionerna linear-gradient och radial-gradient. Se exempel.</p>
+        <p>CSS</p>
+        <code>
+            .div-linear-gradient {<br>
+            &emsp;width: 200px;<br>
+            &emsp;height: 200px;<br>
+            &emsp;background-image: linear-gradient(to right, rgba(123, 200, 140, 1), rgba(255, 142, 124, 1));<br>
+            }<br>
+            <br>
+            .div-radial-gradient {<br>
+            &emsp;width: 200px;<br>
+            &emsp;height: 200px;<br>
+            &emsp;background-image: radial-gradient(rgba(123, 200, 140, 1), rgba(255, 142, 124, 1));<br>
+            }<br>
+        </code>
+        <p>HTML</p>
+        <code>
+            &lt;div class="div-linear-gradient">&lt;/div><br>
+            &lt;div class="div-radial-gradient">&lt;/div>
+        </code>
+        <p>Resultat:</p>
+        <div class="div-linear-gradient"></div>
+        <div class="div-radial-gradient"></div>
     </article>
 </body>
 
