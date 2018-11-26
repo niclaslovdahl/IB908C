@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>2.4 Bilder och bakgrunder</title>
+</head>
+
+<body>
+    <h1>2.4 Bilder och bakgrunder</h1>
+    <article>
+        <h2>Bakgrund</h2>
+        <h3>background</h3>
+        <p>background-egenskapen är en förkortning av background-color, background-image, background position,
+            background-repeat, background-origin, background-clip och background-attatchment. Med hjälp av dessa
+            egenskaper kan man skapa och modifiera bakgrunder. Egenskaperna har delats upp i exempel för ökad
+            tydlighet.</p>
+        <ul>
+            <li>Excepteur in excepteur officia consectetur cupidatat sit laborum veniam Lorem exercitation quis
+                pariatur in.</li>
+            <li>Pariatur minim minim exercitation culpa nulla nostrud.</li>
+            <li>Officia consequat commodo incididunt commodo consequat tempor.</li>
+        </ul>
+
+        <p>CSS</p>
+        <code>
+            body {<br>
+            &emsp;background-image: linear-gradient(to bottom, rgba(123, 22, 235, 1), rgba(255, 255, 255, 0));<br>
+            &emsp;background-repeat: no-repeat;<br>
+            &emsp;background-size: auto 200px;<br>
+            }<br>
+            <br>
+            h1 {<br>
+            &emsp;background-color: tomato;<br>
+            &emsp;padding: 10px;<br>
+            &emsp;border: 4px solid greenyellow;<br>
+            &emsp;background-clip: content-box;<br>
+            }<br>
+            <br>
+            li {<br>
+            &emsp;background-image: linear-gradient(to right, red, green, blue, yellow, orange);<br>
+            &emsp;background-size: 400px auto;<br>
+            &emsp;background-repeat: no-repeat;<br>
+            &emsp;background-position: right;<br>
+            }
+        </code>
+        <p>Resultat:</p>
+        <p>Se resultatet direkt på elementen på sidan.</p>
+    </article>
+    <hr>
+    <article>
+        <h2>Hantering av flytande text bredvid en bild</h2>
+        <p>Vill man att text ska flyta bredvid en bild i en container kan man använda sig av egenskapen float. Man
+            deklarera var i containern man vill att bilden ska flyta. Vill man göra undantag för flytandet för vissa
+            element kan man använda egenskapen clear för det elementet vilket gör att det elementet visas efter det
+            flytande elementet. Margin används för att justera avståndet mellan bild och text. Se exempel.</p>
+        <p>CSS</p>
+        <code>
+            img {<br>
+            &emsp;width: 20%;<br>
+            &emsp;margin: 0px 20px 20px 20px;<br>
+            &emsp;float: left;<br>
+            }<br>
+            <br>
+            h3 {<br>
+            &emsp;clear: left;<br>
+            }
+        </code>
+        <p>Resultat:</p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Golde33443.jpg" alt="Image not found">
+        <p>Lorem tempor Lorem ad et consectetur nisi consequat sit et laborum dolor. Est sit consequat exercitation
+            Lorem aliquip ea. Quis veniam quis cillum sint eu cupidatat consequat esse minim esse consequat laborum
+            est. Ad cupidatat non esse est do dolor. Adipisicing non officia irure proident irure eiusmod ullamco esse
+            eu irure mollit duis amet commodo. Dolore elit incididunt consectetur do occaecat adipisicing minim ad ea
+            culpa cupidatat et.</p>
+        <p>Ad occaecat esse do sunt cillum. Consectetur consectetur cupidatat aliqua nulla Lorem ut eiusmod proident
+            fugiat nulla elit. Nulla esse qui adipisicing fugiat nulla. Nisi velit quis voluptate laborum quis enim
+            deserunt excepteur sint dolore. Officia eu exercitation sunt et irure magna est Lorem dolor. Laboris sunt
+            ex nostrud elit sint. Lorem commodo ut in cupidatat incididunt proident.</p>
+        <h3>Incididunt Lorem Lorem deserunt ea nulla officia ex ipsum consequat proident.</h3>
+    </article>
+</body>
+
+</html>
