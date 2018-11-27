@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>2.5 Navigation</title>
+</head>
+
+<body>
+    <h1>2.5 Navigation</h1>
+    <article>
+        <h2>Länktillstånd</h2>
+        <p>Det finns olika länktillstånd som en webbläsare kan identifiera. Dessa består av en länk som har besökts, en
+            länk som inte har besökts, en länk där pekaren svävar över och en länk som blir klickad. Man kan hantera
+            stilen för dessa olika tillstånd genom att addera tillståndet till selektorn. Se exempel.</p>
+        <h3>a:link, a:active, a:visited och a:hover</h3>
+        <p>CSS</p>
+        <code>
+            a:link {<br>
+            &emsp;color: darkorange;<br>
+            }<br>
+            <br>
+            a:active {<br>
+            &emsp;color: blue;<br>
+            }<br>
+            <br>
+            a:visited {<br>
+            &emsp;color: green;<br>
+            }<br>
+            <br>
+            a:hover {<br>
+            &emsp;color: crimson;<br>
+            }
+        </code>
+        <p>HTML</p>
+        <code>
+            &lt;a href="https://www.google.se/">https://www.google.se/&lt;/a>
+        </code>
+        <p>Resultat:</p>
+        <a href="https://www.google.se/" class="google-link">https://www.google.se/</a>
+    </article>
+    <hr>
+    <article>
+        <h2>Övrigt</h2>
+        <h3>cursor</h3>
+        <p>Med cursor kan man ändra hur pekaren ser ut när man pekar på ett visst element. Se några exempel nedan.</p>
+        <p>CSS</p>
+        <code>
+            .crosshair-cursor {<br>
+            &emsp;cursor: crosshair;<br>
+            }<br>
+            <br>
+            .move-cursor {<br>
+            &emsp;cursor: move;<br>
+            }<br>
+            <br>
+            .progress-cursor {<br>
+            &emsp;cursor: progress;<br>
+            }<br>
+            <br>
+            .zoom-in-cursor {<br>
+            &emsp;cursor: zoom-in;<br>
+            }
+        </code>
+        <p>HTML</p>
+        <code>
+            &lt;h4 class="crosshair-cursor">Crosshair&lt;/h4><br>
+            &lt;h4 class="move-cursor">Move&lt;/h4><br>
+            &lt;h4 class="progress-cursor">Progress&lt;/h4><br>
+            &lt;h4 class="zoom-in-cursor">Zoom-in&lt;/h4>
+        </code>
+        <p>Resultat:</p>
+        <h4 class="crosshair-cursor">Crosshair</h4>
+        <h4 class="move-cursor">Move</h4>
+        <h4 class="progress-cursor">Progress</h4>
+        <h4 class="zoom-in-cursor">Zoom-in</h4>
+        <h3>Stillsatt knapp</h3>
+        <p>En knapp skapad från endast en länk.</p>
+        <a href="https://www.google.se/" class="styled-button">En knapp</a>
+        <h3>En länk med grafik</h3>
+        <p>En länk med bild som bakgrund skapad med endast a-taggen och CSS.</p>
+        <a href="https://sv.wikipedia.org/wiki/Shiba" class="img-link"></a>
+    </article>
+</body>
+
+</html>

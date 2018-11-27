@@ -1,0 +1,79 @@
+a:link {
+    color: darkorange;
+}
+
+a:active {
+    color: blue;
+}
+
+a:visited {
+    color: green;
+}
+
+a:hover {
+    color: crimson;
+}
+
+.crosshair-cursor {
+    cursor: crosshair;
+}
+
+.move-cursor {
+    cursor: move;
+}
+
+.progress-cursor {
+    cursor: progress;
+}
+
+.zoom-in-cursor {
+    cursor: zoom-in;
+}
+
+.styled-button {
+    background-color: cadetblue;
+    border: 2px solid;
+    border-radius: 8px;
+    padding: 6px;
+    text-decoration: none;
+    box-shadow: 3px 4px grey;
+}
+
+.styled-button:link {
+    color: yellow;
+}
+
+.styled-button:active {
+    color: blue;
+}
+
+.styled-button:visited {
+    color: coral;
+}
+
+.styled-button:hover {
+    color: violet;
+    background-color: blueviolet;
+}
+
+.img-link {
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/2/20/Shiba_Inu.jpg);
+    background-size: 200px;
+    background-repeat: no-repeat;
+    display: block;
+    width: 200px;
+    height: 150px;
+}
+
+.img-link:hover {
+    opacity: 0.6;
+    filter: invert(100%);
+}
+
+.img-link:active {
+    opacity: 0.2;
+}
+
+.img-link:visited {
+    opacity: 0.6;
+}
