@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>2.6 Tabeller och formulär</title>
+</head>
+
+<body>
+    <h1>2.6 Tabeller och formulär</h1>
+    <article>
+        <h2>Tabeller</h2>
+        <h3>table-layout</h3>
+        <p>table-layout bestämmer hur tabellen ska visas. Sätts den till auto så används en automatisk tabell-algoritm
+            som
+            justerar cellernas storlek till cellernas innehåll. Används fixed så kommer tabellens bredd bestämmas av
+            första
+            raden celler eller av width om den har ett värde. Se exempel.</p>
+        <p>CSS</p>
+        <code>
+            .auto-table {<br>
+            &emsp;table-layout: auto;<br>
+            &emsp;width: 50px;<br>
+            &emsp;border-collapse: collapse;<br>
+            }<br>
+            <br>
+            .auto-table * {<br>
+            &emsp;border: 2px solid black;<br>
+            }<br>
+            <br>
+            .fixed-table {<br>
+            &emsp;table-layout: fixed;<br>
+            &emsp;width: 50px;<br>
+            &emsp;border-collapse: collapse;<br>
+            }<br>
+            <br>
+            .fixed-table * {<br>
+            &emsp;border: 2px solid black;<br>
+            }
+        </code>
+        <p>Resultat:</p>
+        <table class="auto-table">
+            <tr>
+                <td>Item 1</td>
+                <td>Item 2</td>
+            </tr>
+            <tr>
+                <td>Item 3</td>
+                <td>Item 4</td>
+            </tr>
+            <tr>
+                <td>Item 5</td>
+                <td>Item 6</td>
+            </tr>
+            <tr>
+                <td>Item 7</td>
+                <td>Item 8</td>
+            </tr>
+        </table>
+        <br>
+        <table class="fixed-table">
+            <tr>
+                <td>Item 1</td>
+                <td>Item 2</td>
+            </tr>
+            <tr>
+                <td>Item 3</td>
+                <td>Item 4</td>
+            </tr>
+            <tr>
+                <td>Item 5</td>
+                <td>Item 6</td>
+            </tr>
+            <tr>
+                <td>Item 7</td>
+                <td>Item 8</td>
+            </tr>
+        </table>
+    </article>
+    <hr>
+</body>
+
+</html>

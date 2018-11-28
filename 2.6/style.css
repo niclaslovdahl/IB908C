@@ -1,0 +1,19 @@
+.auto-table {
+    table-layout: auto;
+    width: 50px;
+    border-collapse: collapse;
+}
+
+.auto-table * {
+    border: 2px solid black;
+}
+
+.fixed-table {
+    table-layout: fixed;
+    width: 50px;
+    border-collapse: collapse;
+}
+
+.fixed-table * {
+    border: 2px solid black;
+}
