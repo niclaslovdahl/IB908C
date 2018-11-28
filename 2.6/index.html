@@ -80,6 +80,36 @@
         </table>
     </article>
     <hr>
+    <article>
+        <h2>Formulär</h2>
+        <p>När man ska göra formulär är en bra idé att använda sig av label-taggen. När man ska styla formuläret kan
+            man då få problem då labeltaggen även används för till exempel radioknappar. Man vill då inte att varje
+            label i ett formulär ska hanteras som en egen rad eller egen kategori. För komma runt detta är det en bra
+            idé att använda span-taggen där det finns multipla inputs för en kategori. För att styla formuläret i en
+            fin lista delger man istället de label- och span-taggar man vill ska vara en egen kategori en specifik
+            klass.</p>
+        <p>Det är även en bra idé att använda display-egenskapen på denna klass satt till inline-block då man då har
+            möjligheten att bestämma width och height på dessa taggar. </p>
+        <p>När det kommer till att styla specifika input-element i ett formulär är möjligheterna väldigt olika. Det
+            finns möjligheter att ändra färg och form men generellt så vill man försöka hålla ett formulär så
+            konsekvent man kan för en bättre användarupplevelse.</p>
+        <p>Nedan är ett exempel på ett simpelt stylat formulär enligt tipsen ovan.</p>
+        <form class="pretty-form">
+            <h2 class="form-title">What is your favourite color?</h2>
+            <label for="first-name" class="label">First name:</label>
+            <input type="text" id="first-name"><br>
+            <label for="last-name" class="label">Last name:</label>
+            <input type="text" id="last-name"><br>
+            <span class="label">Favourite color:</span>
+            <label for="radio-1">Red</label>
+            <input type="radio" id="radio-1" name="radio">
+            <label for="radio-2">Green</label>
+            <input type="radio" id="radio-2" name="radio">
+            <label for="radio-3">Blue</label>
+            <input type="radio" id="radio-3" name="radio"><br>
+            <input type="submit">
+        </form>
+    </article>
 </body>
 
 </html>
