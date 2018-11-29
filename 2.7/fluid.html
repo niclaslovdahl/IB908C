@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="fluid.css">
+    <title>2.7 Sidlayout</title>
+</head>
+
+<body>
+    <div class="page-wrapper">
+        <header>
+            <h1>2.7 Sidlayout</h1>
+            <h2>Flytande layout</h2>
+        </header>
+
+        <aside class="aside-left">
+            <h3>width och height</h3>
+            <p>width och height anger en specifik bredd och höjd på ett element. På denna sidan har alla element
+                förutom gul div <code>height:auto</code>. Det är samma sak som 100% och elementets storlek justeras
+                efter dess innehåll. </p>
+        </aside>
+
+        <div class="main">
+            <h3>max-width och max-height</h3>
+            <p>Dessa egenskaper sätter en gräns för hur stor ett element maximalt får vara. Detta kan man använda för
+                att förhindra en flytande layout att flyta ut helt på en stor skärm och där med bli osammanhängande. På
+                denna sidan används <code>max-width: 1200px</code> vilket förhindrar innehållet att bli bredare än 1200
+                pixlar.</p>
+        </div>
+
+        <aside class="aside-right">
+            <h3>min-width och min-height</h3>
+            <p>Precis som max-width och max-height är dessa egenskaper en gräns men denna gången för hur litet ett
+                element får vara. Gul div har en specificerad min-height och kommer därför inte anpassa sig efter
+                innehållet.</p>
+        </aside>
+
+        <footer>
+            <h3>vertical-align</h3>
+            <p>Egenskapen används för att vertikalt justera vart inline- och tabellcell-element ska visas. Exempel på
+                detta i en text visas efter denna mening och har egenskapen <code>vertical-align: top</code>. <img src="https://upload.wikimedia.org/wikipedia/commons/5/56/Run.svg"
+                    alt="Image not found"></p>
+        </footer>
+    </div>
+</body>
+
+</html>
