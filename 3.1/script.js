@@ -1,5 +1,9 @@
-// Button event listener
+// Event listeners
 document.getElementById("execute").addEventListener("click", powInt);
+document.getElementById("sort").addEventListener("click", sortNames);
+
+// Loop running showDate every second
+window.setInterval(loadDate, 1000);
 
 /** 
  * Gets the values to calculate from the DOM and evaluates if they are
@@ -17,3 +21,39 @@ function powInt() {
         document.getElementById("output").innerHTML = "Fel inmatningstyp";
     }
 }
+
+// Declares and initiates name array and DOM-element
+let names = ["Niclas", "Johan", "Sofie", "Lars", "Hampus"];
+let namesElement = document.getElementById("names");
+
+/**
+ * Clears and loads names array to the DOM.
+ */
+function loadNames() {
+    namesElement.innerHTML = "";
+    names.forEach((name, index) => {
+        namesElement.innerHTML += (index + 1) + ". " + name + "<br>";
+    });
+}
+
+/**
+ * Sorts the name array in alphabetical order and calls loadnames().
+ */
+function sortNames() {
+    names.sort();
+    loadNames();
+}
+
+// Declares and initiates DOM-element
+let dateElement = document.getElementById("date");
+
+/**
+ * Updates DOM-element with current date and time.
+ */
+function loadDate() {
+    dateElement.innerHTML = Date();
+}
+
+// Loads content to the DOM
+loadDate();
+loadNames();
