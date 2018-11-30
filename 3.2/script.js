@@ -1,6 +1,6 @@
 /**
- * This function gets and sets values and attributes of a link-tag. It also
- * updates a paragraph and removes a button.
+ * Gets and sets values and attributes of link-tag. Also updates paragraph
+ * and removes button.
  */
 $("#link-button").click(() => {
     $(".link-google").removeClass("link-google").addClass("link-youtube");
@@ -11,8 +11,65 @@ $("#link-button").click(() => {
 });
 
 /**
- * This function updates a paragraph with the current width of the browser.
+ * Updates paragraph with the current width of the browser.
  */
 $(window).resize(() => {
     $(".window-text").text("Webbläsarens bredd är " + $(window).width() + " pixlar.");
+});
+
+/**
+ * Outputs text to paragraph.
+ */
+$(".input-one").focus(() => {
+    $(".focus-text").text("Du markerade översta fältet.");
+});
+
+/**
+ * Outputs text to paragraph.
+ */
+$(".input-two").focus(() => {
+    $(".focus-text").text("Du markerade nedersta fältet.");
+});
+
+/**
+ * Outputs text to paragraph including the key that was pressed.
+ */
+$(document).keydown((e) => {
+    $(".keypress-text").text("Du tryckte på " + e.key);
+});
+
+// Boolean operator declared and initiated
+let hover = false;
+
+/**
+ * Toogles between classes.
+ */
+$("#hover-div").hover(() => {
+    if (hover) {
+        $("#hover-div").removeClass("hover-div-color").addClass("hover-div");
+    } else {
+        $("#hover-div").removeClass("hover-div").addClass("hover-div-color");
+    }
+    hover = !hover;
+});
+
+/**
+ * Gets x and y pointer cordinates from event and ouputs it to paragraph.
+ */
+$(window).mousemove((e) => {
+    $(".mouse-cords").text("Koordinater för din pekare är: x:" + e.pageX + " y:" + e.pageY);
+});
+
+/**
+ * Returns false.
+ */
+$("#checkbox").click(() => {
+    return false;
+});
+
+/**
+ * Sets all on() events to off().
+ */
+$("#button-destroy").click(() => {
+    $("*").off();
 });
