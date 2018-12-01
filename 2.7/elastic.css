@@ -54,3 +54,9 @@ h3,
 p {
     margin: 1em;
 }
+
+.column-width {
+    -webkit-column-width: 100px;
+    -moz-column-width: 100px;
+    column-width: 100px;
+}
