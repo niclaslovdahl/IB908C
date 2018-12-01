@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="fixed.css">
+    <title>2.7 Sidlayout</title>
+</head>
+
+<body>
+    <div class="page-wrapper">
+        <header>
+            <h1>2.7 Sidlayout</h1>
+            <h2>Fixerad layout</h2>
+        </header>
+
+        <aside class="aside-left">
+            <div class="div-content">
+                <h3>position, bottom, top, left och right</h3>
+                <p>position används för att bestämma hur ett element ska placeras ut på en sida. bottom, top, left
+                    och right bestämmer vart på sidan elementet ska placeras. Denna div är placerad med <code>position:
+                        absolute</code> samt <code>bottom: 0px;</code> relativt till sin förälder.</p>
+            </div>
+        </aside>
+
+        <div class="main">
+            <h3>float</h3>
+            <p>Egenskapen float används för att specificera hur ett element ska "flyta" i förhållande till andra
+                element i ett dokument. På detta sätt kan man få element att visas upp bredvid varandra genom
+                att använda <code>float: left;</code> eller <code>float: right;</code>. Utan float kommer element
+                på sidan visas upp vertikalt efter varandra.</p>
+            <h3>z-index</h3>
+            <div class="div-box"></div>
+            <p>Denna egenskapen bestämmer i vilken ordning element som överlappar ska visas. Element visas i
+                ordning lägst värde längst bak och högst värde längst fram. Den gula lådan under denna text har <code>z-index:
+                    -1</code> och placeras därför bakom texten.</p>
+        </div>
+
+        <aside class="aside-right"></aside>
+
+        <footer>
+            <h3>clear</h3>
+            <p>Egenskapen bestämmer om element är tillåtna att flyta bredvid ett annat. Denna låda har egenskapen <code>clear:
+                    both</code> vilket gör att inga element får flyta på någon sida och elementet får därför en ny rad.</p>
+        </footer>
+    </div>
+</body>
+
+</html>
