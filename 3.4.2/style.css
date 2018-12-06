@@ -5,3 +5,8 @@
 .img-rollover {
     width: 200px;
 }
+
+#image-draw {
+    width: 150px;
+    display: none;
+}
