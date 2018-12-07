@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <title>3.4.5 Formulärhantering</title>
+</head>
+
+<body>
+    <h1>3.4.5 Formulärhantering</h1>
+    <form class="pretty-form">
+        <h2 class="form-title">Checkout</h2>
+        <label for="name" class="label">Namn:</label>
+        <input type="text" class="required" name="name" id="name" title="Fyll i ditt namn"><br>
+        <label for="email" class="label">Email:</label>
+        <input type="text" class="required email" name="email" id="email" title="Fyll i en giltig email">
+
+        <h3>Leveransadress:</h3>
+        <label for="address" class="label">Adress:</label>
+        <input type="text" class="required" name="address" id="address" title="Fyll i adress"><br>
+        <label for="zip-code" class="label">Postnummer:</label>
+        <input type="text" class="required number" name="zip-code" id="zip-code" title="Fyll i postnummer"><br>
+        <label for="city" class="label">Stad:</label>
+        <input type="text" class="required" name="city" id="city" title="Fyll i stad"><br>
+        <label for="checkbox-billing" class="label">Faktura:</label>
+        <input type="checkbox" id="checkbox-billing">
+
+        <div class="billing">
+            <h3 class="label">Fakturaadress:</h3><br>
+            <label for="address-billing" class="label">Adress:</label>
+            <input type="text" id="address-billing"><br>
+            <label for="zip-code-billing" class="label">Postnummer:</label>
+            <input type="text" id="zip-code-billing"><br>
+            <label for="city-billing" class="label">Stad:</label>
+            <input type="text" id="city-billing"><br>
+        </div>
+
+        <h3>Betalningsmetod</h3>
+        <label for="card" class="label">Faktura</label>
+        <input type="radio" name="billing" id="card">
+        <label for="paypal" class="label">PayPal</label>
+        <input type="radio" name="billing" id="paypal"><br>
+
+        <input type="submit">
+    </form>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+.pretty-form {
+    background-color: #114B5F;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    border-radius: 20px;
+    box-shadow: 5px 8px grey;
+    width: 600px;
+}
+
+.form-title {
+    padding: 10px 0px 0px 20px;
+}
+
+.label {
+    display: inline-block;
+    font-weight: bold;
+    text-align: right;
+    width: 100px;
+    padding: 5px;
+}
+
+.pretty-form input[type="text"] {
+    border-radius: 4px;
+    border: 3px solid #1A936F;
+}
+
+.pretty-form input[type="submit"] {
+    margin: 10px 0px 20px 20px;
+    ;
+    border-radius: 4px;
+    border: 3px solid #1A936F;
+}
+
+h3 {
+    margin: 15px;
+}
