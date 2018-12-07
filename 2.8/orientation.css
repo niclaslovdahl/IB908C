@@ -1,0 +1,11 @@
+@media all and (orientation:portrait) {
+    body {
+        background-color: yellow;
+    }
+}
+
+@media all and (orientation:landscape) {
+    body {
+        background-color: green;
+    }
+}
