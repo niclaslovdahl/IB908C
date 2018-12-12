@@ -3,35 +3,50 @@
     flex-direction: column;
     max-width: 1000px;
     margin: auto;
-    border: 2px solid black;
+    background-color: #2f2e3d;
+    border-radius: 10px;
+}
+
+.sequencer {
+    padding: 20px;
 }
 
 .instrument {
     display: flex;
     justify-content: center;
-    margin: 5px;
+    margin: 1px;
 }
 
 .step {
+    float: left;
     height: 50px;
     width: 50px;
-    border: 2px solid blue;
-    float: left;
+    border: 1px solid #2f2e3d;
+    border-radius: 3px;
     background-color: white;
+    opacity: 0.5;
 }
 
-.step-bd {
-    background-color: white;
+.step-red {
+    background-color: #d92919;
 }
 
-.step-hh {
-    background-color: white;
+.step-orange {
+    background-color: #ef7b23;
+}
+
+.step-yellow {
+    background-color: #dcd830;
+}
+
+.step-white {
+    background-color: #e6e7c1;
 }
 
 .step-marked {
-    background-color: green;
+    opacity: 0.9;
 }
 
 .step-active {
-    background-color: red;
+    opacity: 1;
 }
