@@ -138,31 +138,34 @@ instruments.forEach((instrument, index) => {
     });
 });
 
-$("#button-start").click(() => {
-    seq.start();
-});
+let startButton = true;
 
-$("#button-stop").click(() => {
-    seq.stop();
-    $(
-        "#" +
-            previousIndex +
-            ", #" +
-            (previousIndex + 16) +
-            ", #" +
-            (previousIndex + 32) +
-            ", #" +
-            (previousIndex + 48) +
-            ", #" +
-            (previousIndex + 64) +
-            ", #" +
-            (previousIndex + 80) +
-            ", #" +
-            (previousIndex + 96) +
-            ", #" +
-            (previousIndex + 112)
-    ).removeClass("step-active");
-    Tone.Draw.cancel(0);
-    index = 0;
-    previousIndex = -1;
+$(".button-start-stop").click(() => {
+    if (startButton) {
+        seq.start();
+    } else {
+        seq.stop();
+        $(
+            "#" +
+                previousIndex +
+                ", #" +
+                (previousIndex + 16) +
+                ", #" +
+                (previousIndex + 32) +
+                ", #" +
+                (previousIndex + 48) +
+                ", #" +
+                (previousIndex + 64) +
+                ", #" +
+                (previousIndex + 80) +
+                ", #" +
+                (previousIndex + 96) +
+                ", #" +
+                (previousIndex + 112)
+        ).removeClass("step-active");
+        Tone.Draw.cancel(0);
+        index = 0;
+        previousIndex = -1;
+    }
+    startButton = !startButton;
 });

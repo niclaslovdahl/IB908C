@@ -5,16 +5,39 @@
     margin: auto;
     background-color: #2f2e3d;
     border-radius: 10px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+        "Lucida Sans", Arial, sans-serif;
+    color: #ef7b23;
+}
+
+h2 {
+    margin: 20px 20px 0px 20px;
 }
 
 .sequencer {
     padding: 20px;
 }
 
+.control {
+    margin: 0px 20px 20px 20px;
+}
+
 .instrument {
     display: flex;
     justify-content: center;
     margin: 1px;
+}
+
+.button-start-stop {
+    background-color: #e6e7c1;
+    color: #2f2e3d;
+    border-radius: 3px;
+    padding: 6px;
+    text-decoration: none;
+}
+
+.button-start-stop:active {
+    background-color: #ef7b23;
 }
 
 .step {
