@@ -1,14 +1,15 @@
+const instruments = [
+    "bd",
+    "snare",
+    "toml",
+    "tomm",
+    "tomh",
+    "clap",
+    "ride",
+    "hh"
+];
+
 function createInstruments() {
-    const instruments = [
-        "bd",
-        "snare",
-        "toml",
-        "tomm",
-        "tomh",
-        "clap",
-        "ride",
-        "hh"
-    ];
     const stepColor = ["red", "orange", "yellow", "white"];
 
     let diff = 0;
@@ -41,16 +42,11 @@ function createInstruments() {
 
 createInstruments();
 
-let sequencerMatrix = [
-    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-];
+let sequencerMatrix = [];
+
+instruments.forEach((instrument, index) => {
+    sequencerMatrix[index] = new Array(16).fill(0);
+});
 
 const sampler = new Tone.Sampler({
     C1: "res/audio/BD.mp3",
@@ -133,52 +129,13 @@ function updateSequence() {
     }
 }
 
-$(".step-bd").click(function() {
-    const id = $(this).attr("id");
-    $("#" + id).toggleClass("step-marked");
-    sequencerMatrix[0][id] = 1 - sequencerMatrix[0][id];
-});
-
-$(".step-snare").click(function() {
-    const id = $(this).attr("id");
-    $("#" + id).toggleClass("step-marked");
-    sequencerMatrix[1][id - 16] = 1 - sequencerMatrix[1][id - 16];
-});
-
-$(".step-toml").click(function() {
-    const id = $(this).attr("id");
-    $("#" + id).toggleClass("step-marked");
-    sequencerMatrix[2][id - 32] = 1 - sequencerMatrix[2][id - 32];
-});
-
-$(".step-tomm").click(function() {
-    const id = $(this).attr("id");
-    $("#" + id).toggleClass("step-marked");
-    sequencerMatrix[3][id - 48] = 1 - sequencerMatrix[3][id - 48];
-});
-
-$(".step-tomh").click(function() {
-    const id = $(this).attr("id");
-    $("#" + id).toggleClass("step-marked");
-    sequencerMatrix[4][id - 64] = 1 - sequencerMatrix[4][id - 64];
-});
-
-$(".step-clap").click(function() {
-    const id = $(this).attr("id");
-    $("#" + id).toggleClass("step-marked");
-    sequencerMatrix[5][id - 80] = 1 - sequencerMatrix[5][id - 80];
-});
-
-$(".step-ride").click(function() {
-    const id = $(this).attr("id");
-    $("#" + id).toggleClass("step-marked");
-    sequencerMatrix[6][id - 96] = 1 - sequencerMatrix[6][id - 96];
-});
-
-$(".step-hh").click(function() {
-    const id = $(this).attr("id");
-    $("#" + id).toggleClass("step-marked");
-    sequencerMatrix[7][id - 112] = 1 - sequencerMatrix[7][id - 112];
+instruments.forEach((instrument, index) => {
+    $(`.step-${instrument}`).click(function() {
+        const id = $(this).attr("id");
+        $(`#${id}`).toggleClass("step-marked");
+        sequencerMatrix[index][id - index * 16] =
+            1 - sequencerMatrix[index][id - index * 16];
+    });
 });
 
 $("#button-start").click(() => {
