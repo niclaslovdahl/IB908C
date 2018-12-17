@@ -1,3 +1,4 @@
+// Instruments declared and initiated
 const instruments = [
     "bd",
     "snare",
@@ -9,6 +10,10 @@ const instruments = [
     "hh"
 ];
 
+/**
+ * Sequencer UI matrix generated and added to page. Different classes added for
+ * specific color and instrument type.
+ */
 function createInstruments() {
     const stepColor = ["red", "orange", "yellow", "white"];
 
@@ -42,12 +47,17 @@ function createInstruments() {
 
 createInstruments();
 
+// Keeps track of all instruments state in the sequencer.
 let sequencerMatrix = [];
 
+/**
+ * Matrix generated with array.lengt === 16 per instrument.
+ */
 instruments.forEach((instrument, index) => {
     sequencerMatrix[index] = new Array(16).fill(0);
 });
 
+// Instrument voices created.
 const sampler = new Tone.Sampler({
     C1: "res/audio/BD.mp3",
     C2: "res/audio/SNARE.mp3",
@@ -65,6 +75,10 @@ let index = 0;
 let previousIndex;
 let start = true;
 
+/**
+ * Sequencer handling the loop of the program. Triggers audio playback
+ * according to sequencerMatrix state. Also updates UI when loop advances.
+ */
 var seq = new Tone.Sequence(
     (time, note) => {
         for (let i = 0; i < sequencerMatrix.length; i++) {
@@ -83,6 +97,10 @@ var seq = new Tone.Sequence(
 
 Tone.Transport.start();
 
+/**
+ * Adds class for the current active step in the loop and removes class for
+ * previous active step.
+ */
 function updateSequence() {
     $(
         "#" +
@@ -129,6 +147,10 @@ function updateSequence() {
     }
 }
 
+/**
+ * Creates actionlisteners for all sequencer buttons. Updates state of
+ * sequencerMatrix and class on click.
+ */
 instruments.forEach((instrument, index) => {
     $(`.step-${instrument}`).click(function() {
         const id = $(this).attr("id");
@@ -140,6 +162,9 @@ instruments.forEach((instrument, index) => {
 
 let startButton = true;
 
+/**
+ * Starts and stops the sequencer loop.
+ */
 $(".button-start-stop").click(() => {
     if (startButton) {
         seq.start();
